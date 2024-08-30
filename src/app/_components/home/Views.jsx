@@ -31,7 +31,7 @@ const Views = () => {
       <div className='flex mx-auto items-center justify-center flex-col md:flex-row w-full mt-20 gap-3 md:gap-5 lg:gap-8 min-h-fit'>
         <div className='flex flex-col gap-2 items-center'>
           {/* Step 4: Update the view */}
-          <span className='text-3xl font-bold md:text-5xl lg:text-7xl'>{organicViews.toLocaleString()}</span>
+          <span className='text-3xl font-bold md:text-5xl lg:text-7xl'>75,023,513</span>
           <span className='font-semibold text-xl md:text-3xl lg:text-5xl'>organic views</span>
         </div>
         <Separator orientation="vertical" className='!bg-white hidden md:block h-20 !text-white' />

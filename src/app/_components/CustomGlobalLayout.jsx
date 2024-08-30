@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react'
 import Lenis from 'lenis'
 import { Nav } from './navigation/Nav'
+import { Footer } from './footer/Footer'
 
 const CustomGlobalLayout = ({children}) => {
   useEffect(()=>{
@@ -20,7 +21,7 @@ requestAnimationFrame(raf)
     <>
     <Nav/>
         {children}
-        {/* <Footer/> */}
+        <Footer/>
     </>
   )
 }

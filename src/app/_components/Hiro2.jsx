@@ -53,7 +53,7 @@ const Hiro2 = () => {
             <h1 className="mainAdjusted">
               We grow
             </h1>
-            <h2 className="bg-white/40  backdrop-blur-md  rounded-full px-8 py-2 border">
+            <h2 className="animate-fade-in  z-50 w-full bg-white/20 -translate-y-4 border-b opacity-0 backdrop-blur-md [--animation-delay:600ms]  rounded-full px-8 py-2 border">
 
              <span className="text-main  mainAdjusted ">
               Brands
@@ -81,7 +81,7 @@ const Hiro2 = () => {
           className="absolute inset-0 h-full w-full min-w-[1000px] bg-no-repeat"
           style={{
             background:
-              "radial-gradient(211.5% 113.1% at -66.4% 35.9%, rgb(0, 0, 0) 39.132%, rgb(0, 0, 0) 51.4243%, rgb(153, 0, 255) 67.5951%, #8806cd 84.1832%)",
+              "radial-gradient(211.5% 113.1% at -66.4% 35.9%, rgb(0, 0, 0) 39.132%, rgb(0, 0, 0) 39.4243%, rgb(153, 0, 255) 67.5951%, #8806cd 84.1832%)",
             opacity: 1,
           }}
         ></div>

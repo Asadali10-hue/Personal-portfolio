@@ -18,6 +18,7 @@
     "framer-motion": "^11.3.30",
     "lenis": "^1.1.11",
     "lucide-react": "^0.435.0",
+    "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.6",
     "react": "^18",
     "react-calendly": "^4.3.1",

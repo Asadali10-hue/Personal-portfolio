@@ -1,3 +1,4 @@
+'use client'
 import { trusted } from '@/data/trusted'
 import React from 'react'
 import TrustedCard from '../trusted/TrustedCard'
