@@ -5,9 +5,12 @@ import Image from "next/image";
 import start from "../../../../assets/icons/star.svg";
 import line from "../../../../assets/icons/lines.svg";
 import starFill from "../../../../assets/icons/starFill.svg";
+import ShortVideos from "./ShortVideos";
 
 export const PromVideo = () => (
   <AnimatedGridBackgroundSection>
+    <div>
+
     <div
       className={
         "text-4xl md:text-7xl relative font-medium  text-center flex flex-col font-main text-white"
@@ -51,7 +54,10 @@ export const PromVideo = () => (
           them into paying customers!
         </p>
       </div>
+
     </div>
+      <ShortVideos/>
+        </div>
   </AnimatedGridBackgroundSection>
 );
 

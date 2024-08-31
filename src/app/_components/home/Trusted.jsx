@@ -2,6 +2,12 @@
 import { trusted } from '@/data/trusted'
 import React from 'react'
 import TrustedCard from '../trusted/TrustedCard'
+import dynamic from 'next/dynamic'
+
+const TrustedCardDynamic = dynamic(() => import ('../trusted/TrustedCard'),{
+  ssr: false,
+  loading: ()=> <p className='text-white'>Loading...</p>
+})
 
 const Trusted = () => {
   return (
@@ -10,7 +16,7 @@ const Trusted = () => {
 
       {trusted.map((user)=>{
         return(
-          <TrustedCard key={user.id} user={user}/>
+          <TrustedCardDynamic key={user.id} user={user}/>
         )
       })}
       </div>
@@ -18,4 +24,4 @@ const Trusted = () => {
   )
 }
 
-export default Trusted
+export default React.memo(Trusted)

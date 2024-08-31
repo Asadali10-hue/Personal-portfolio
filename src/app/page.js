@@ -6,6 +6,12 @@ import Views from "./_components/home/Views";
 import WhyInstagram from "./_components/home/WhyInstagram";
 import Perks from "./_components/Perks";
 import { PromVideo } from "./_components/home/PromVideos";
+import dynamic from "next/dynamic";
+
+const CtaDynamic = dynamic(()=> import('./_components/home/CalendarComponent'), {
+  ssr: false,
+  loading: ()=> <p className="text-white">Loading...</p>
+})
 
 export default function Home() {
   return (

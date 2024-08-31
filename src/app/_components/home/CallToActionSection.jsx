@@ -4,13 +4,8 @@ import { motion, useAnimation, useInView } from 'framer-motion'
 import { AiOutlineTikTok } from "react-icons/ai";
 
 import {
-   BarChart,
    ChevronRight,
-   File,
-   Globe,
    HeartHandshake,
-   Rss,
-   Shield,
    Youtube,
    Facebook,
    Mic,
