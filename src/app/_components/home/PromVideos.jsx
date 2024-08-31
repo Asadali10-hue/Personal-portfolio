@@ -6,14 +6,15 @@ import start from "../../../../assets/icons/star.svg";
 import line from "../../../../assets/icons/lines.svg";
 import starFill from "../../../../assets/icons/starFill.svg";
 import ShortVideos from "./ShortVideos";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 export const PromVideo = () => (
   <AnimatedGridBackgroundSection>
-    <div>
+    <div className="">
 
     <div
       className={
-        "text-4xl md:text-7xl relative font-medium  text-center flex flex-col font-main text-white"
+        "text-4xl md:text-7xl relative font-medium text-center flex flex-col font-main text-white"
       }
     >
       <div className="absolute left-20 lg:left-48 lg:top-20">
@@ -49,20 +50,24 @@ export const PromVideo = () => (
         <div className="font-bold text-main lg:ml-56">that makes</div>
         <div className="lg:mr-40">your brand spread</div>
         <div className="font-bold text-main">like wildfire</div>
-        <p className="font-semibold text-white text-base md:text-xl mt-5 lg:mt-10 text-center">
-          Our system bring you consistent organic followers and predictably turn
-          them into paying customers!
+        <p className="font-semibold text-white text-sm md:text-xl mt-5 lg:mt-10 text-center font-second">
+        Our system bring you consistent organic followers and predictably turn them into paying customers!
+
         </p>
       </div>
 
     </div>
+    <ParallaxProvider>
+
       <ShortVideos/>
+    </ParallaxProvider>
         </div>
   </AnimatedGridBackgroundSection>
 );
 
 const AnimatedGridBackgroundSection = ({ children }) => {
   return (
+    
     <div className={"w-screen min-h-screen overflow-hidden relative mx-auto"}>
       <div className={"container mx-auto relative z-[2] px-2 my-32"}>
         {children}
