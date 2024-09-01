@@ -81,6 +81,9 @@
 .headerText {
   font-size: clamp(25px, 5vw, 55px);
 }
+.headerText2 {
+  font-size: clamp(25px, 6vw, 75px);
+}
 .mainText {
   font-size: clamp(25px, 5vw, 30px);
 }

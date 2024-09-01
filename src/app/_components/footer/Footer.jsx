@@ -79,11 +79,9 @@ export function Footer() {
                         className="text-primary w-32"
                         alt='logo'
                      />
-                     <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-                        Nyxb UI
-                     </span>
+                     
                   </Link>
-                  <p className="max-w-xs">UI Library for Design Engineers</p>
+                  <p className="max-w-xs text-neutral-500">we grow brands, We help entrepreneurs and creators build, grow, and monetize their brands on Instagram and YouTube.</p>
                </div>
                <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10">
                   {footerNavs.map(nav => (
