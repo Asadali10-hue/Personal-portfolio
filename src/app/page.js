@@ -7,6 +7,7 @@ import WhyInstagram from "./_components/home/WhyInstagram";
 import Perks from "./_components/Perks";
 import { PromVideo } from "./_components/home/PromVideos";
 import dynamic from "next/dynamic";
+import { TimelineComponent } from "./_components/home/TimelineComponent";
 
 const CtaDynamic = dynamic(()=> import('./_components/home/CalendarComponent'), {
   ssr: false,
@@ -24,6 +25,7 @@ export default function Home() {
 
    <PromVideo/>
    </div>
+   <TimelineComponent/>
    <WhyInstagram/>
    <Perks/>
    <CalendarComponent/>

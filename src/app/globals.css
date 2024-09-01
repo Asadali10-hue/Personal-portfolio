@@ -114,5 +114,10 @@
 .calendly-inline-widget iframe {
   height: 1000px !important;
   }
-
+  .text-stroke-3 {
+    text-shadow: -2px -2px 0 #8806CD, 2px -2px 0 #8806CD, -2px 2px 0 #8806CD, 2px 2px 0 #8806CD;
+}
+  .text-stroke-2 {
+    text-shadow: -1px -1px 0 #8806CD, 1px -1px 0 #8806CD, -1px 1px 0 #8806CD, 1px 1px 0 #8806CD;
+}
  
