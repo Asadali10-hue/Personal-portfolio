@@ -66,6 +66,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  body{
+    @apply scroll-smooth
+  }
 
   .mainHeaderText{
     @apply animate-fade-in uppercase -translate-y-4 text-balance bg-gradient-to-br from-white from-30% to-white/40 bg-clip-text py-6 text-5xl font-medium leading-none tracking-wide text-transparent opacity-0 [--animation-delay:200ms] sm:text-6xl md:text-7xl lg:text-8xl
@@ -124,4 +127,23 @@
     text-shadow: -1px -1px 0 #8806CD, 1px -1px 0 #8806CD, -1px 1px 0 #8806CD, 1px 1px 0 #8806CD;
 }
  
+html.lenis, html.lenis body {
+  height: auto;
+  scroll-behavior: smooth !important;
+}
 
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

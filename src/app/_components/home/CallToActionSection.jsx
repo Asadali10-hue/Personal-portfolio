@@ -17,6 +17,7 @@ import { useEffect, useId, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
 import Marquee from '@/components/magicui/marquee'
 import { Button } from '@/components/ui/button'
+import CtaButton from '../CtaButton';
 const tiles = [
    {
       icon: <Youtube className="size-full text-rose-600" />,
@@ -176,22 +177,12 @@ export default function CallToActionSection() {
                         <HeartHandshake className="mx-auto size-16 lg:size-24 text-white" />
                      </div>
                      <div className="text-primary z-10 mt-4 flex flex-col items-center text-center">
-                        <h1 className="text-3xl font-bold lg:text-4xl text-white">
+                        <h1 className="text-3xl font-bold lg:text-4xl text-white mb-10">
                         Accelerate Your Brand's Success Today.
                         </h1>
-                        {/* <p className="mt-2 text-white">
-                           Start your 7-day free trial. No credit card required.
-                        </p> */}
-                        <Link
-                           href="#"
-                           className='block mt-5'
-                        >
-                           <Button size='lg' >
-
-                           Book a Call Now
-                           <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
-                           </Button>
-                        </Link>
+                       
+                     
+                        <CtaButton text='Book a Call' url='#book'/>
                      </div>
                      <div className="bg-black absolute inset-0  -z-10 rounded-full opacity-40 blur-xl" />
                   </div>

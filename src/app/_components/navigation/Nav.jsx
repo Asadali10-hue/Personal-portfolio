@@ -13,7 +13,7 @@ const menuItem = [
   {
     id: 1,
     label: "Features",
-    href: "/features",
+    href: "/#book",
   },
   {
     id: 2,
@@ -110,7 +110,7 @@ export function Nav() {
                 {menuItem.map((item)=>{
                     return(
 
-            <Link className="mr-6 text-sm" href="/signin" key={item.id}>
+            <Link className="mr-6 text-sm" href="#book" key={item.id}>
               {item.label}
             </Link>
                     )
