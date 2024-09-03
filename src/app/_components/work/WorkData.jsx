@@ -30,7 +30,7 @@ const WorkData = async () => {
               className="text-white border overflow-hidden rounded-md"
             >
               <div className="!h-[250px] !w-full]">
-              <ReacttVideo video={item.fields?.videoUrl} style={{ height: '100%', width: '100%' }} />
+              <VideReact video={item.fields?.videoUrl} style={{ height: '100%', width: '100%' }} />
               </div>
 
               <div>Footer</div>
