@@ -2,8 +2,8 @@ import { createClient } from 'contentful';
 
 
 export const client = createClient({
-    space: process.env.CONTENTFULL_SPACE_ID,
-    accessToken: process.env.CONTENTFULL_ACCESS_TOKEN
+    space: process.env.NEXT_PUBLIC_CONTENTFULL_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFULL_ACCESS_TOKEN
   });
 
 // const VIDEO_PER_PAGE = 6
