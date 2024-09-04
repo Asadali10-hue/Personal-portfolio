@@ -2,8 +2,8 @@ import { createClient } from 'contentful';
 
 
 export const client = createClient({
-    space: process.env.NEXT_PUBLIC_CONTENTFULL_SPACE_ID,
-    accessToken: process.env.NEXT_PUBLIC_CONTENTFULL_ACCESS_TOKEN
+    space: process.env.CONTENTFULL_SPACE_ID,
+    accessToken: process.env.CONTENTFULL_ACCESS_TOKEN
   });
 
 // const VIDEO_PER_PAGE = 6
@@ -11,24 +11,24 @@ export const client = createClient({
     const offset = perPage * (currentPage - 1)
  
     try {
-      const response = await client.getEntries(
-        {
-          content_type: 'youtubeVideos',
-          order: "sys.createdAt",
-          limit: perPage,
-          skip: offset
-         
-          
-        },
-        // { next: { revalidate: 0 } }
+      // Fetch entries with the included reference fields
+      const response = await client.getEntries({
+        content_type: 'youtubeVideos',             // Ensure this is the correct content type
+        order: 'sys.createdAt',                    // Order by creation date
+        limit: perPage,                            // Limit the number of items per page
+        skip: offset,                              // Skip to the correct offset based on the current page
+        include: 1                                 // Include referenced entries up to 1 level deep
+      });
+  
+      // Manually filter items where plateform.fields.slug is 'real-estate'
+      const filteredItems = response.items.filter(item => 
+        item.fields.plateform && item.fields.plateform.fields.slug === 'real-estate'
       );
   
-      const totalItems = response.total;
-    const items = response.items;
-
-    return { totalItems, items };
+      const totalItems = filteredItems.length;  // Get the count after filtering
+      return { totalItems, items: filteredItems };  // Return filtered items
     } catch (error) {
-      console.error("Error fetching Contentful entries:", error);
+      console.error('Error fetching Contentful entries:', error);
       return [];
     }
   };
