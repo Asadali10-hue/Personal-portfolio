@@ -29,7 +29,7 @@ const PortolioLink = () => {
     <div className='bg-white text-black mt-10 lg:mt-20 h-full p-4 lg:p-8 rounded-xl'>
         <CursorComponent>
 
-       <Link href='/our-work' className='text-xl lg:text-3xl xl:text-5xl font-medium py-8 xl:py-8 flex justify-between items-center group'>
+       <Link href='/our-work?page=1' className='text-xl lg:text-3xl xl:text-5xl font-medium py-8 xl:py-8 flex justify-between items-center group'>
        <span>
        View our work
        </span>

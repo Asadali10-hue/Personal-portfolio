@@ -2,19 +2,21 @@ import { createClient } from 'contentful';
 
 
 export const client = createClient({
-    space: process.env.CONTENTFULL_SPACE_ID,
-    accessToken: process.env.CONTENTFULL_ACCESS_TOKEN
+    space: process.env.NEXT_PUBLIC_CONTENTFULL_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFULL_ACCESS_TOKEN
   });
 
-
-  export const contentfullvideos = async () => {
+// const VIDEO_PER_PAGE = 6
+  export const contentfullvideos = async (currentPage, perPage) => {
+    const offset = perPage * (currentPage - 1)
  
     try {
       const response = await client.getEntries(
         {
           content_type: 'youtubeVideos',
           order: "sys.createdAt",
-          limit: 10
+          limit: perPage,
+          skip: offset
          
           
         },
