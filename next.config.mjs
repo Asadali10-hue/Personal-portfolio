@@ -1,10 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
-    space: process.env.CONTENTFULL_SPACE_ID,
-    accessToken: process.env.CONTENTFULL_ACCESS_TOKEN
-
-  },
     images: {
         remotePatterns: [
           {

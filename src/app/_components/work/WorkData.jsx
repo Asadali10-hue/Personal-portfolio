@@ -29,24 +29,28 @@ const VideReact = dynamic(() => import("./ReacttVideo"), {
 const WorkData = () => {
   const [videos, setVideos]=useState([])
   const [total, setTotal]= useState()
+  const [categories, setCategories]= useState([])
   const perPage = 9
 
   const searchParams = useSearchParams()
- 
+  const industry = searchParams?.get('industry')
+
+  const currentCategory = industry ?  industry : 'real-estate'
+  
   const page = searchParams?.get('page')
   const currentPage = page ? parseInt(page) : 1
-  console.log(videos);
 
-  // console.log(page);
+
 
   useEffect(()=>{
     
     const getVideos = async()=>{
 
       try {
-        const data = await contentfullvideos(currentPage, perPage);
+        const data = await contentfullvideos(currentPage, perPage, currentCategory);
         setVideos(data.items)
         setTotal(data.totalItems)
+        setCategories(data.platformResponse.items)
         
       } catch (error) {
         
@@ -56,9 +60,9 @@ const WorkData = () => {
 
     }
     getVideos()
-  }, [currentPage])
+  }, [currentPage, currentCategory])
 
-  console.log("data", videos);
+  // console.log("data", categories);
   return (
     <section className="min-h-screen  container px-2 mx-auto">
       <div className="mx-auto  flex justify-center">
@@ -67,10 +71,20 @@ const WorkData = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
+                 
                   <span>Pick Your Industry</span>
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <NavigationMenuLink>Link</NavigationMenuLink>
+                <NavigationMenuContent >
+                  <div className="">
+                {categories?.map((category)=>{
+                  console.log(category);
+                    return(
+                      <Link href={`/our-work?page=1&industry=${category.fields.slug}`} key={category.sys.id}>{category.fields.title}</Link>
+                      
+                    )
+                  })}
+
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>

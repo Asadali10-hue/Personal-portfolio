@@ -7,7 +7,7 @@ export const client = createClient({
   });
 
 // const VIDEO_PER_PAGE = 6
-  export const contentfullvideos = async (currentPage, perPage) => {
+  export const contentfullvideos = async (currentPage, perPage, currentCategory) => {
     const offset = perPage * (currentPage - 1)
  
     try {
@@ -19,14 +19,21 @@ export const client = createClient({
         skip: offset,                              // Skip to the correct offset based on the current page
         include: 1                                 // Include referenced entries up to 1 level deep
       });
+
+
+       // Fetch all platforms
+    const platformResponse = await client.getEntries({
+      content_type: 'categories',      // Use the correct content type ID for platforms
+      limit: 1000                      // Fetch all platforms (adjust limit as needed)
+    });
   
       // Manually filter items where plateform.fields.slug is 'real-estate'
       const filteredItems = response.items.filter(item => 
-        item.fields.plateform && item.fields.plateform.fields.slug === 'real-estate'
+        item.fields.plateform && item.fields.plateform.fields.slug === currentCategory
       );
   
       const totalItems = filteredItems.length;  // Get the count after filtering
-      return { totalItems, items: filteredItems };  // Return filtered items
+      return { totalItems, items: filteredItems, platformResponse };  // Return filtered items
     } catch (error) {
       console.error('Error fetching Contentful entries:', error);
       return [];
