@@ -45,6 +45,8 @@ const WorkData = () => {
   useEffect(()=>{
     
     const getVideos = async()=>{
+      console.log(typeof currentCategory);
+      console.log(currentCategory);
 
       try {
         const data = await contentfullvideos(currentPage, perPage, currentCategory);
@@ -60,7 +62,7 @@ const WorkData = () => {
 
     }
     getVideos()
-  }, [currentPage, currentCategory])
+  }, [currentPage, industry, currentCategory])
 
   // console.log("data", categories);
   return (
@@ -77,7 +79,7 @@ const WorkData = () => {
                 <NavigationMenuContent >
                   <div className="">
                 {categories?.map((category)=>{
-                  console.log(category);
+                  // console.log(category);
                     return(
                       <Link href={`/our-work?page=1&industry=${category.fields.slug}`} key={category.sys.id}>{category.fields.title}</Link>
                       
