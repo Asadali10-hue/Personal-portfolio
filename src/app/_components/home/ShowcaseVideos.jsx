@@ -4,7 +4,7 @@ import { SecondColmnShowcase } from './SecondColmnShowcase'
 
 const ShowcaseVideos = () => {
   return (
-    <section className='py-32 w-full'>
+    <section className='py-32 w-full' id='results'>
         <h2 className="mainTitleText text-center mb-10">
         Snippets of Satisfaction
         </h2>

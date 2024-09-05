@@ -82,7 +82,7 @@ setup
    ,
   ];
   return (
-    <section className="w-full bg-neutral-950">
+    <section className="w-full bg-neutral-950" id='process'>
 
     <div className="max-w-5xl mx-auto ">
       <Timeline data={data} />

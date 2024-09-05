@@ -5,7 +5,7 @@ import Particles from "@/components/magicui/particles";
 
 const Hiro2 = () => {
   return (
-    <section className="relative h-fit w-full flex items-center overflow-hidden md:min-h-screen">
+    <section className="relative min-h-[80vh] w-full flex items-center overflow-hidden md:min-h-screen">
       <div className="absolute left-0 top-0 h-full w-full"></div>
        <Particles className="absolute inset-0 " />
       {/* <BackgroundBeams/> */}
@@ -23,12 +23,12 @@ const Hiro2 = () => {
             </h1>
             <h2 className="animate-fade-in w-fit  z-50 mx-auto bg-black/30 sm:px-9 sticky top-0  backdrop-filter backdrop-blur-[20px]  border-b opacity-0 [--animation-delay:600ms]  rounded-full px-8 py-2 border">
 
-             <span className="text-main  mainAdjusted ">
+             <span className="!text-main text-3xl font-main font-bold md:mainAdjusted ">
              Visual Story
                 </span> 
             </h2>
             </div>
-            <p className="subTitle mt-2">
+            <p className="text-sm sm:text-base text-white md:subTitle mt-2">
               We help entrepreneurs and creators build, grow, and monetize their
               brands
               <br className="hidden md:block" /> on Instagram and YouTube.

@@ -10,7 +10,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 
 export const PromVideo = () => (
   <AnimatedGridBackgroundSection>
-    <div className="">
+    <div className="" id='our-craft'>
 
     <div
       className={
