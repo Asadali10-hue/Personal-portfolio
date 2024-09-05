@@ -10,7 +10,7 @@ export function TimelineComponent() {
           Setting up foundation
           </p>
           <div className="mb-8">
-            <p className="line-clamp-3 text-neutral-400 text-sm md:text-base font-normal mb-4">
+            <p className="md:line-clamp-3 text-neutral-400 text-sm md:text-base font-normal mb-4">
             We start by building brand positioning, story constitution document, and a solid content strategy that align with your personality and goals.
             </p>
           </div>
@@ -82,7 +82,7 @@ setup
    ,
   ];
   return (
-    <section className="w-full bg-neutral-950" id='process'>
+    <section className="w-full bg-neutral-950 overflow-clip" id='process'>
 
     <div className="max-w-5xl mx-auto ">
       <Timeline data={data} />

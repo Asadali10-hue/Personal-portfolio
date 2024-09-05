@@ -30,7 +30,7 @@ export const Timeline = ({
     (<div
       className="w-full bg-neutral-950 font-sans md:px-10 py-32"
       ref={containerRef}>
-      <div className="text-4xl md:text-7xl relative font-medium  text-center flex flex-col font-main">
+      <div className="text-2xl md:text-7xl relative font-medium  text-center flex flex-col font-main">
            
            <div className="flex ml-32 relative w-fit">
            <div className="absolute -left-12 animate-spin [animation-duration:10s]">
@@ -51,7 +51,7 @@ export const Timeline = ({
            <div className="absolute -bottom-10 left-1/2">
                <Image alt="star" src={star} className="size-8 animate-pulse [animation-duration:5s]"/>
            </div>
-           process to make your brand
+           process to make <br className="md:hidden"/> your brand
            <span className="font-bold text-main">
 
            Go Big!
