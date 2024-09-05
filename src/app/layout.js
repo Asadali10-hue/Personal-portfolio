@@ -7,9 +7,13 @@ import CustomGlobalLayout from "./_components/CustomGlobalLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Refine fram",
+  metadataBase: new URL('https://refine-sepia.vercel.app/'),
+  title: "Refine frame",
   description:
     "we grow brands, We help entrepreneurs and creators build, grow, and monetize their brands on Instagram and YouTube.",
+    openGraph:{
+      images: './reframeopengraph.png'
+    }
 };
 
 const sans = DM_Sans({
