@@ -15,59 +15,27 @@ const Hiro2 = () => {
             className="flex flex-col items-center justify-start gap-8 md:gap-5"
             style={{ opacity: 1, transform: "none" }}
           >
-            {/* <div className="flex w-full items-start justify-center">
-              <a href="/pricing">
-                <div className="flex h-9 w-fit cursor-pointer items-center justify-start rounded-full border border-white/10 bg-white/[0.05] px-2 py-1 text-sm font-medium transition-all duration-200 hover:bg-white/10">
-                  <div
-                    className="select-none rounded-full bg-highlight px-1 py-[1px] text-xs text-white"
-                    style={{ boxShadow: "#8806cd 0px 0px 10px" }}
-                  >
-                    new
-                  </div>
-                  <div
-                    className="overflow-hidden text-nowrap flex items-center justify-start gap-0.5"
-                    style={{ width: "fit-content", marginLeft: "0.5rem" }}
-                  >
-                    Checkout our new pricing
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="tabler-icon tabler-icon-chevron-right mt-[0.1rem]"
-                    >
-                      <path d="M9 6l6 6-6 6"></path>
-                    </svg>
-                  </div>
-                </div>
-              </a>
-            </div> */}
             <div>
 
 
             <h1 className="mainAdjusted">
             Shaping Your Brand’s
             </h1>
-            <h2 className="animate-fade-in w-fit  z-50 mx-auto bg-white/20 -translate-y-4 border-b opacity-0 backdrop-blur-md [--animation-delay:600ms]  rounded-full px-8 py-2 border">
+            <h2 className="animate-fade-in w-fit  z-50 mx-auto bg-black/30 sm:px-9 sticky top-0  backdrop-filter backdrop-blur-[20px]  border-b opacity-0 [--animation-delay:600ms]  rounded-full px-8 py-2 border">
 
              <span className="text-main  mainAdjusted ">
              Visual Story
                 </span> 
             </h2>
             </div>
-            <p className="subTitle">
+            <p className="subTitle mt-2">
               We help entrepreneurs and creators build, grow, and monetize their
               brands
               <br className="hidden md:block" /> on Instagram and YouTube.
             </p>
 
-            <CreatorsComposent />
-            <div className="mt-8 flex items-center gap-10">
+            {/* <CreatorsComposent /> */}
+            <div className="flex items-center gap-10">
               <ShimmerButton>Book a Call Now</ShimmerButton>
             </div>
           </div>

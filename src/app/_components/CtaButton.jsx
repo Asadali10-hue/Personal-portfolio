@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 import React from "react";
-import { ReactLenis, useLenis } from "lenis/react";
 
 const CtaButton = ({ text, url }) => {
-  const lenis = useLenis();
   return (
     <Link
       href={`/${url}`}
