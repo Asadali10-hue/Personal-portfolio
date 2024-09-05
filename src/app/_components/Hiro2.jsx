@@ -15,7 +15,7 @@ const Hiro2 = () => {
             className="flex flex-col items-center justify-start gap-8 md:gap-5"
             style={{ opacity: 1, transform: "none" }}
           >
-            <div className="flex w-full items-start justify-center">
+            {/* <div className="flex w-full items-start justify-center">
               <a href="/pricing">
                 <div className="flex h-9 w-fit cursor-pointer items-center justify-start rounded-full border border-white/10 bg-white/[0.05] px-2 py-1 text-sm font-medium transition-all duration-200 hover:bg-white/10">
                   <div
@@ -46,17 +46,17 @@ const Hiro2 = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </div> */}
             <div>
 
 
             <h1 className="mainAdjusted">
-              We grow
+            Shaping Your Brand’s
             </h1>
-            <h2 className="animate-fade-in  z-50 w-full bg-white/20 -translate-y-4 border-b opacity-0 backdrop-blur-md [--animation-delay:600ms]  rounded-full px-8 py-2 border">
+            <h2 className="animate-fade-in w-fit  z-50 mx-auto bg-white/20 -translate-y-4 border-b opacity-0 backdrop-blur-md [--animation-delay:600ms]  rounded-full px-8 py-2 border">
 
              <span className="text-main  mainAdjusted ">
-              Brands
+             Visual Story
                 </span> 
             </h2>
             </div>

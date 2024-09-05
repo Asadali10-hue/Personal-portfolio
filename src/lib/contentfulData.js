@@ -35,8 +35,8 @@ export const client = createClient({
         item.fields.plateform && item.fields.plateform.fields.slug === currentCategory
       );
   
-      const totalItems = filteredItems.length;  // Get the count after filtering
-      return { totalItems, items: filteredItems, platformResponse };  // Return filtered items
+      const totalItems = response.total;  // Get the count after filtering
+      return { totalItems, items: response.items, platformResponse };  // Return filtered items
     } catch (error) {
       console.error('Error fetching Contentful entries:', error);
       return [];

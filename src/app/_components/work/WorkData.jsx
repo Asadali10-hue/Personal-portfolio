@@ -1,36 +1,44 @@
 'use client'
 import BlurFade from "@/components/magicui/blur-fade";
 import { contentfullvideos } from "@/lib/contentfulData";
-import ReacttVideo from "./ReacttVideo";
-import { Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useSearchParams } from 'next/navigation'
+import { cn } from "@/lib/utils";
+
+
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+
+
+
+
+
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  HoveredLink,
+  Menu,
+  MenuItem,
+  ProductItem,
+} from "@/components/ui/navbar-menu";
 
 
 const VideReact = dynamic(() => import("./ReacttVideo"), {
   ssr: false,
-  loading: () => <p>Loading...</p>,
+  loading: () => <p className="text-white">Loading...</p>,
 });
 
 const WorkData = () => {
   const [videos, setVideos]=useState([])
   const [total, setTotal]= useState()
   const [categories, setCategories]= useState([])
-  const perPage = 9
+  const perPage = 6
 
   const searchParams = useSearchParams()
   const industry = searchParams?.get('industry')
@@ -52,7 +60,9 @@ const WorkData = () => {
         const data = await contentfullvideos(currentPage, perPage, currentCategory);
         setVideos(data.items)
         setTotal(data.totalItems)
-        setCategories(data.platformResponse.items)
+        setCategories(data.items)
+
+        // console.log(data.totalCategory);
         
       } catch (error) {
         
@@ -66,31 +76,12 @@ const WorkData = () => {
 
   // console.log("data", categories);
   return (
-    <section className="min-h-screen  container px-2 mx-auto">
+    <section className="relative h-full w-full pb-32">
+      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+    <div className="min-h-screen   container px-2 mx-auto">
       <div className="mx-auto  flex justify-center">
-        <div className="">
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>
-                 
-                  <span>Pick Your Industry</span>
-                </NavigationMenuTrigger>
-                <NavigationMenuContent >
-                  <div className="">
-                {categories?.map((category)=>{
-                  // console.log(category);
-                    return(
-                      <Link href={`/our-work?page=1&industry=${category.fields.slug}`} key={category.sys.id}>{category.fields.title}</Link>
-                      
-                    )
-                  })}
-
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+        <div className="relative w-full flex items-center justify-center">
+          <FilterCategory className="top-2" categories={categories} />
         </div>
       </div>
       <div className="mt-32 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -285,8 +276,43 @@ const WorkData = () => {
           </li>
         </ul>
       </div>
+    </div>
+
     </section>
   );
 };
 
 export default WorkData;
+
+
+function FilterCategory({ className, categories }) {
+  const [active, setActive] = useState(null);
+  return (
+    <div className={cn("  max-w-2xl mx-auto z-10", className)}>
+      <Menu setActive={setActive} className="w-fit bg-red-500">
+        <MenuItem
+          setActive={setActive}
+          active={active}
+          item="Pick your industry"
+          className="bg-red-500"
+        >
+          <ul className="grid w-fit gap-3 p-4 md:w-[500px] grid-cols-2  md:grid-cols-2 lg:grid-cols-3 lg:w-[600px]">
+            {categories.map((category)=>{
+              console.log(category);
+              return(
+              //   <Link
+              //   key={category.sys.id}
+              //   href={`/our-work?page=1&industry=${category.fields.slug}`}
+              // >
+              //   {category.fields.title}
+              // </Link>
+              <h1>Hello world</h1>
+              )
+            })}
+          </ul>
+        </MenuItem>
+      </Menu>
+    </div>
+  );
+}
+

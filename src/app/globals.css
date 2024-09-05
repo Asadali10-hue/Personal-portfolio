@@ -80,6 +80,11 @@
     @apply mainHeaderText font-main font-bold 
   }
 }
+@layer components {
+  .mainTitleText{
+    @apply text-main font-main font-bold headerText2 tracking-wide
+  }
+}
 
 .headerText {
   font-size: clamp(25px, 5vw, 55px);
@@ -87,8 +92,14 @@
 .headerText2 {
   font-size: clamp(25px, 6vw, 75px);
 }
+.headText {
+  font-size: clamp(30px, 6vw, 75px);
+}
 .mainText {
   font-size: clamp(25px, 5vw, 30px);
+}
+.boxText {
+  font-size: clamp(18px, 3vw, 30px);
 }
 .title {
   font-size: clamp(18px, 4vw, 20px);

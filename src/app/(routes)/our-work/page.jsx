@@ -9,7 +9,7 @@ const OurWork = async() => {
   return (
     <main className='min-h-screen '>
       <WorkHeader/>
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={<p className='text-white'>Loading...</p>}>
 
       <WorkData/>
       </Suspense>

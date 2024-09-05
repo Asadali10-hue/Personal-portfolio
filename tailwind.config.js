@@ -78,6 +78,11 @@ module.exports = {
         sm: 'calc(var(--radius) - 4px)',
      },
      keyframes: {
+      scroll: {
+        to: {
+          transform: "translate(calc(-50% - 0.5rem))",
+        },
+      },
       moveUp: {
         '0%': { transform: 'translateY(5%)', opacity: '0' },
         '100%': { transform: 'translateY(0%)', opacity: '1' }
@@ -170,6 +175,8 @@ module.exports = {
         },
      },
      animation: {
+      scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       marquee: "marquee var(--duration) linear infinite",
       "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       moveUp: 'moveUp 1.4s ease forwards',

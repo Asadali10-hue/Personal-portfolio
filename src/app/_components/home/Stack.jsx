@@ -14,7 +14,7 @@ export default function Stack() {
   return (
     <main ref={container} className=" relative  flex flex-col md:flex-row ">
       <div className="md:sticky md:top-0 pt-32 md:py-[30vh] h-fit flex-1">
-        <h2 className="text-4xl md:text-7xl font-bold text-main text-center md:text-left">
+        <h2 className="mainTitleText text-center md:text-left">
           Why choose Us
         </h2>
         <p className='font-semibold text-black text-xl md:text-xl mt-5 text-center md:text-left'>Over 1000+ videos edited to perfection, showcasing our expertise and precision.</p>
