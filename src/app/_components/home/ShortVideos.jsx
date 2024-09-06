@@ -30,7 +30,7 @@ const ShortVideos = () => {
   return (
     
     <div className="mt-10 relative max-w-6xl mx-auto flex  flex-col items-center md:flex-row text-sm md:justify-between gap-8 md:min-h-[70vh] !mb-32">
-      <Card className="p-0 w-[200px] md:absolute md:w-[150px] xl:w-[250px]  xl:-top-28 md:left-8 md:-top-40 md:-rotate-45 bg-black" ref={parallax.ref}>
+      <Card className="p-0 w-[200px] md:absolute md:w-[150px] xl:w-[250px]  xl:-top-28 xl:-left-24 md:left-8 md:-top-40  md:-rotate-45 bg-black" ref={parallax.ref}>
   <CardContent className="p-2">
     <div className="aspect-w-9 aspect-h-16 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
       <iframe
