@@ -2,6 +2,7 @@ import React from "react";
 import CreatorsComposent from "./CreatorsComposent";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import Particles from "@/components/magicui/particles";
+import Link from "next/link";
 
 const Hiro2 = () => {
   return (
@@ -35,9 +36,9 @@ const Hiro2 = () => {
             </p>
 
             {/* <CreatorsComposent /> */}
-            <div className="flex items-center gap-10">
+            <Link href='#book' className="flex items-center gap-10">
               <ShimmerButton>Book a Call Now</ShimmerButton>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -62,7 +62,7 @@ const MobileNav = () => {
         <ul className="text-white flex flex-col mt-20 p-4 gap-4">
             {navLinks.map((item)=>{
                 return(
-                    <Link href={item.url} className="text-white text-2xl" onClick={handleOpen}>
+                    <Link key={item.id} href={item.url} className="text-white text-2xl" onClick={handleOpen}>
                     {item.name}
                     </Link>
                 )
