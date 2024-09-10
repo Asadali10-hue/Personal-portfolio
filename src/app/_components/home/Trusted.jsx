@@ -3,10 +3,16 @@ import { trusted } from '@/data/trusted'
 import React from 'react'
 import TrustedCard from '../trusted/TrustedCard'
 import dynamic from 'next/dynamic'
+import { Skeleton } from '@/components/ui/skeleton'
 
 const TrustedCardDynamic = dynamic(() => import ('../trusted/TrustedCard'),{
   ssr: false,
-  loading: ()=> <p className='text-white'>Loading...</p>
+  loading: ()=> <div className="flex flex-col items-center justify-center gap-2 lg:gap-4">
+  <Skeleton className="h-12 w-12 lg:size-40 rounded-full" />
+  <div className="space-y-2">
+    <Skeleton className="h-4 w-[50px]" />
+  </div>
+</div>
 })
 
 const Trusted = () => {
