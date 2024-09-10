@@ -38,7 +38,7 @@ const WorkData = () => {
   const [videos, setVideos]=useState([])
   const [total, setTotal]= useState()
   const [categories, setCategories]= useState([])
-  const perPage = 6
+  const perPage = 9
 
   const searchParams = useSearchParams()
   const industry = searchParams?.get('industry')

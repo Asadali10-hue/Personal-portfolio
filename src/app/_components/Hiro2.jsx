@@ -20,22 +20,34 @@ const Hiro2 = () => {
 
 
             <h1 className="mainAdjusted">
-            Shaping Your Brand’s
+            We Give
             </h1>
-            <h2 className="animate-fade-in w-fit  z-50 mx-auto bg-black/30 sm:px-9 sticky top-0  backdrop-filter backdrop-blur-[20px]  border-b opacity-0 [--animation-delay:600ms]  rounded-full px-8 py-2 border">
+            <h2 className="animate-fade-in w-fit  z-50 mx-auto blurTest  border-b opacity-0 [--animation-delay:600ms]  rounded-full px-8 py-2 border">
+
+             <span className="!text-main text-3xl font-main font-bold md:mainAdjusted ">
+             Brands a Visual
+                </span> 
+            </h2>
+            {/* <h2 className="animate-fade-in w-fit  z-50 mx-auto blurTest  border-b opacity-0 [--animation-delay:600ms]  rounded-full px-8 py-2 border">
+
+             <span className="!text-main text-3xl font-main font-bold md:mainAdjusted ">
+             a Visual
+                </span> 
+            </h2> */}
+            {/* <h2 className="animate-fade-in w-fit  z-50 mx-auto bg-black/30 sm:px-9 sticky top-0  backdrop-filter backdrop-blur-[20px]  border-b opacity-0 [--animation-delay:600ms]  rounded-full px-8 py-2 border">
 
              <span className="!text-main text-3xl font-main font-bold md:mainAdjusted ">
              Visual Story
                 </span> 
-            </h2>
+            </h2> */}
             </div>
-            <p className="text-sm sm:text-base text-white md:subTitle mt-2">
+            <p className="text-sm font-sans sm:text-base md:text-[18px] !text-white md:subTitle mt-2">
               We help entrepreneurs and creators build, grow, and monetize their
               brands
-              <br className="hidden md:block" /> on Instagram and YouTube.
+              <br className="hidden md:block text-main" /> on Instagram and YouTube.
             </p>
 
-            {/* <CreatorsComposent /> */}
+            <CreatorsComposent />
             <Link href='#book' className="flex items-center gap-10">
               <ShimmerButton>Book a Call Now</ShimmerButton>
             </Link>
