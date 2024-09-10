@@ -47,7 +47,7 @@ const Hiro2 = () => {
               <br className="hidden md:block text-main" /> on Instagram and YouTube.
             </p>
 
-            <CreatorsComposent />
+            {/* <CreatorsComposent /> */}
             <Link href='#book' className="flex items-center gap-10">
               <ShimmerButton>Book a Call Now</ShimmerButton>
             </Link>
