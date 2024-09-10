@@ -30,8 +30,8 @@ const NavTest = () => {
 
   return (
     <>
-    <nav className="fixed left-0 top-2 z-50 w-full hidden md:block">
-    <div className="container mx-auto flex justify-between items-center py-4 px-6 ">
+    <nav className="fixed left-0 top-4 z-50 w-full hidden md:block">
+    <div className="max-w-7xl mx-auto flex justify-between items-center px-6 ">
       {/* Logo Section */}
       {!isScrolled &&
       
@@ -43,7 +43,7 @@ const NavTest = () => {
     }
   
       {/* Navigation Links */}
-      <ul className={`flex gap-6 lg:gap-8 text-white items-center mx-auto font-medium border ${isScrolled ? 'px-10 py-2' : 'py-4 lg:py-8 px-8 lg:px-20'}  rounded-full bg-black/30 backdrop-blur-md animate-fade-in [--animation-delay:600ms]`}>
+      <ul className={`flex gap-6 lg:gap-8 text-white items-center mx-auto font-medium border ${isScrolled ? 'px-10 py-2' : 'py-4 lg:py-6 px-8 lg:px-20'}  rounded-full bg-black/30 backdrop-blur-md animate-fade-in [--animation-delay:600ms]`}>
        {navLinks.map((item)=>{
            return(
             <Link href={item.url} key={item.id}>

@@ -70,6 +70,10 @@
     @apply scroll-smooth
   }
 
+  .mainTitleAjusted{
+
+    @apply animate-fade-in  mainTitle leading-none tracking-wide text-white font-main font-bold [--animation-delay:200ms]
+  }
   .mainHeaderText{
     @apply animate-fade-in uppercase -translate-y-4 text-balance bg-gradient-to-br from-white from-30% to-white/40 bg-clip-text py-6 text-5xl font-medium leading-none tracking-wide text-transparent opacity-0 [--animation-delay:200ms] sm:text-6xl md:text-7xl lg:text-8xl
   }
@@ -86,6 +90,12 @@
   }
 }
 
+.mainTitle {
+  font-size: clamp(45px, 15vw, 112px);
+}
+.mainTitle2 {
+  font-size: clamp(35px, 10vw, 112px);
+}
 .headerText {
   font-size: clamp(25px, 5vw, 55px);
 }

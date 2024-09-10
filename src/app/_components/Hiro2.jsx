@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Hiro2 = () => {
   return (
-    <section className="relative min-h-[80vh] w-full flex items-center overflow-hidden md:min-h-screen">
+    <section className="relative min-h-[80vh] w-full flex items-center overflow-hidden md:min-h-[92vh]">
       <div className="absolute left-0 top-0 h-full w-full"></div>
        <Particles className="absolute inset-0 " />
       {/* <BackgroundBeams/> */}
@@ -19,12 +19,12 @@ const Hiro2 = () => {
             <div>
 
 
-            <h1 className="mainAdjusted">
+            <h1 className="mainTitleAjusted">
             We Give
             </h1>
-            <h2 className="animate-fade-in w-fit  z-50 mx-auto blurTest  border-b opacity-0 [--animation-delay:600ms]  rounded-full px-8 py-2 border">
+            <h2 className="animate-fade-in w-fit  z-50 mx-auto blurTest  border-b opacity-0 [--animation-delay:600ms] mt-5 rounded-full px-8 py-2 lg:px-10 lg:py-4 border-8 border-slate-500">
 
-             <span className="!text-main text-3xl font-main font-bold md:mainAdjusted ">
+             <span className="!text-main font-bold text-4xl lg:mainTitleAjusted">
              Brands a Visual
                 </span> 
             </h2>
@@ -41,14 +41,14 @@ const Hiro2 = () => {
                 </span> 
             </h2> */}
             </div>
-            <p className="text-sm font-sans sm:text-base md:text-[18px] !text-white md:subTitle mt-2">
+            <p className="text-sm font-sans sm:text-base md:text-[18px] !text-white md:subTitle !line-clamp-3 mt-2 lg:mt-5">
               We help entrepreneurs and creators build, grow, and monetize their
               brands
               <br className="hidden md:block text-main" /> on Instagram and YouTube.
             </p>
 
             {/* <CreatorsComposent /> */}
-            <Link href='#book' className="flex items-center gap-10">
+            <Link href='#book' className="flex items-center gap-10 lg:mt-5">
               <ShimmerButton>Book a Call Now</ShimmerButton>
             </Link>
           </div>
