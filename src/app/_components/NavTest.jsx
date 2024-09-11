@@ -6,6 +6,7 @@ import Image from 'next/image';
 import logo from '../../../public/logo.png'
 import { navLinks } from '@/data/navLinks';
 import MobileNav from './navigation/MobileNav';
+import { scrollTo } from '@/lib/scrollToLenis';
 
 
 
@@ -46,7 +47,7 @@ const NavTest = () => {
       <ul className={`flex gap-6 lg:gap-8 text-white items-center mx-auto font-medium border ${isScrolled ? 'px-10 py-2' : 'py-4 lg:py-6 px-8 lg:px-20'}  rounded-full bg-black/30 backdrop-blur-md animate-fade-in [--animation-delay:600ms]`}>
        {navLinks.map((item)=>{
            return(
-            <Link href={item.url} key={item.id}>
+            <Link href={`/${item.url}`} key={item.id} onClick={scrollTo(item.url) }>
                   {item.name}
                 </Link>
         )

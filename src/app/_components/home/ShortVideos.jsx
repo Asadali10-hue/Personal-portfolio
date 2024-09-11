@@ -10,19 +10,19 @@ import { Parallax, ParallaxProvider, useParallax } from "react-scroll-parallax";
 
 const ShortVideos = () => {
   const parallax = useParallax({
-    speed: 10,
+    speed: 2,
     rotate: [0, -10]
   });
   const parallax2 = useParallax({
-    speed: 10,
+    speed: 2,
     rotate: [0, 10]
   });
   const parallax3 = useParallax({
-    speed: 10,
+    speed: 2,
     rotate: [0, -10]
   });
   const parallax4 = useParallax({
-    speed: 10,
+    speed: 2,
     rotate: [0, 10]
   });
 

@@ -168,7 +168,9 @@ html.lenis, html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
-
+html{
+  scroll-behavior: smooth !important;
+}
 
 .blurClassDark{
   /* From https://css.glass */
