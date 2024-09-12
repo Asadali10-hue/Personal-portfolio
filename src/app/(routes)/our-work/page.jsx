@@ -7,7 +7,7 @@ import React, { Suspense } from 'react'
 const OurWork = async() => {
  
   return (
-    <main className='min-h-screen '>
+    <main className='min-h-screen relative'>
       <WorkHeader/>
       <Suspense fallback={<p className='text-white'>Loading...</p>}>
 

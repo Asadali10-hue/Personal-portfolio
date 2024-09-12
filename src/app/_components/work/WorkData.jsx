@@ -84,7 +84,7 @@ const WorkData = () => {
           <FilterCategory className="top-2" categories={categories} />
         </div>
       </div>
-      <div className="mt-32 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="mt-32 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ">
         {videos?.map((item, idx) => {
           return (
             <BlurFade
@@ -93,7 +93,7 @@ const WorkData = () => {
               inView
               className="text-white overflow-hidden rounded-md"
             >
-              <div className="!h-[250px] !w-full]">
+              <div className="!h-[250px] !w-full]  pointer-events-auto" >
                 <VideReact
                   video={item.fields?.videoUrl}
                   style={{ height: "100%", width: "100%" }}
@@ -315,4 +315,3 @@ function FilterCategory({ className, categories }) {
     </div>
   );
 }
-
