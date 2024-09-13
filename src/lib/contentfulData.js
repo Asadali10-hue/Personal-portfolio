@@ -9,7 +9,6 @@ export const client = createClient({
 // const VIDEO_PER_PAGE = 6
   export const contentfullvideos = async (currentPage, perPage, currentCategory) => {
     const offset = perPage * (currentPage - 1)
-    // const url = `https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_CONTENTFULL_SPACE_ID}/entries/?content_type=youtubeVideos&fields.plateform.fields.slug[all]=real-estate`
  
     try {
       const response = await client.getEntries({
@@ -17,7 +16,7 @@ export const client = createClient({
         // select: 'fields',
         // 'fields.sys.contentType.sys?.id': "youtubeVideos",  
         'fields.plateform.sys.contentType.sys.id': "categories", //works
-        'fields.plateform.fields.slug[match]': 'tiktok-and-reel',   
+        'fields.plateform.fields.slug[match]': currentCategory,   
         // order: 'sys.createdAt',                    
         limit: perPage,                           
         skip: offset,                              
@@ -41,6 +40,25 @@ export const client = createClient({
   
       const totalItems = response.total;  // Get the count after filtering
       return { totalItems, items: response.items, platformResponse };  // Return filtered items
+    } catch (error) {
+      console.error('Error fetching Contentful entries:', error);
+      return [];
+    }
+  };
+
+
+  export const contentfullvideosCategories = async () => {
+ 
+    try {
+      const response = await client.getEntries({
+        content_type: 'categories', 
+                                  
+                                      
+      },
+      { next: { revalidate: 0 } }
+    );
+      
+      return { items: response.items };  // Return filtered items
     } catch (error) {
       console.error('Error fetching Contentful entries:', error);
       return [];

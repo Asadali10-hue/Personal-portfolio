@@ -24,6 +24,7 @@ import {
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { animationVariants } from "@/lib/popopAnimation";
+import { FilterCategory } from "./FilterCategory";
 
 
 const VideReact = dynamic(() => import("./ReacttVideo"), {
@@ -54,8 +55,7 @@ const WorkData = () => {
   useEffect(()=>{
     
     const getVideos = async()=>{
-      // console.log(typeof currentCategory);
-      // console.log(currentCategory);
+      
 
       try {
         const data = await contentfullvideos(currentPage, perPage, currentCategory);
@@ -63,7 +63,6 @@ const WorkData = () => {
         setTotal(data.totalItems)
         setCategories(data.items)
 
-        // console.log(data.totalCategory);
         
       } catch (error) {
         
@@ -75,25 +74,10 @@ const WorkData = () => {
     getVideos()
   }, [currentPage, industry, currentCategory])
 
-  // console.log("data", categories);
   return (
     <section className="relative h-full w-full pb-32">
       <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 
-      {/* {videoPopup && 
-              
-              <div className="fixed z-[99999] bg-black/50 backdrop-blur-md inset-0 flex justify-center items-center">
-
-
-                   <div className="w-full max-w-4xl aspect-video  pointer-events-auto">
-                <VideReact
-                  video={`https://www.youtube.com/watch?v=${videoLink}`}
-                  style={{ height: "100%", width: "100%" }}
-                  
-                />
-              </div> 
-              </div>
-              } */}
 
 <AnimatePresence>
         {videoPopup && (
@@ -135,8 +119,6 @@ const WorkData = () => {
         {videos?.map((item, idx) => {
 
           const videoThumb = item.fields?.videoUrl.slice(-11)
-          console.log(item);
-
           const handleClick = (videoId) => {
             console.log("Video ID:", videoId);
             setVideoLink(videoId)
@@ -357,33 +339,3 @@ const WorkData = () => {
 export default WorkData;
 
 
-function FilterCategory({ className, categories }) {
-  const [active, setActive] = useState(null);
-  return (
-    <div className={cn("  max-w-2xl mx-auto z-10", className)}>
-      <Menu setActive={setActive} className="w-fit bg-red-500">
-        <MenuItem
-          setActive={setActive}
-          active={active}
-          item="Pick your industry"
-          className="bg-red-500"
-        >
-          {/* <ul className="grid w-fit gap-3 p-4 md:w-[500px] grid-cols-2  md:grid-cols-2 lg:grid-cols-3 lg:w-[600px]">
-            {categories.map((category)=>{
-              console.log(category);
-              return(
-              //   <Link
-              //   key={category.sys.id}
-              //   href={`/our-work?page=1&industry=${category.fields.slug}`}
-              // >
-              //   {category.fields.title}
-              // </Link>
-              <h1 key={category.sys.id}>Hello world</h1>
-              )
-            })}
-          </ul> */}
-        </MenuItem>
-      </Menu>
-    </div>
-  );
-}
