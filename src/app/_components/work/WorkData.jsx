@@ -135,7 +135,7 @@ const WorkData = () => {
         {videos?.map((item, idx) => {
 
           const videoThumb = item.fields?.videoUrl.slice(-11)
-          console.log(videoThumb);
+          console.log(item);
 
           const handleClick = (videoId) => {
             console.log("Video ID:", videoId);
@@ -368,7 +368,7 @@ function FilterCategory({ className, categories }) {
           item="Pick your industry"
           className="bg-red-500"
         >
-          <ul className="grid w-fit gap-3 p-4 md:w-[500px] grid-cols-2  md:grid-cols-2 lg:grid-cols-3 lg:w-[600px]">
+          {/* <ul className="grid w-fit gap-3 p-4 md:w-[500px] grid-cols-2  md:grid-cols-2 lg:grid-cols-3 lg:w-[600px]">
             {categories.map((category)=>{
               console.log(category);
               return(
@@ -381,7 +381,7 @@ function FilterCategory({ className, categories }) {
               <h1 key={category.sys.id}>Hello world</h1>
               )
             })}
-          </ul>
+          </ul> */}
         </MenuItem>
       </Menu>
     </div>

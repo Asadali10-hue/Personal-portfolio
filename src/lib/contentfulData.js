@@ -9,15 +9,19 @@ export const client = createClient({
 // const VIDEO_PER_PAGE = 6
   export const contentfullvideos = async (currentPage, perPage, currentCategory) => {
     const offset = perPage * (currentPage - 1)
+    // const url = `https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_CONTENTFULL_SPACE_ID}/entries/?content_type=youtubeVideos&fields.plateform.fields.slug[all]=real-estate`
  
     try {
-      // Fetch entries with the included reference fields
       const response = await client.getEntries({
-        content_type: 'youtubeVideos',             // Ensure this is the correct content type
+        content_type: 'youtubeVideos', 
+        // select: 'fields',
+        // 'fields.sys.contentType.sys?.id': "youtubeVideos",  
+        'fields.plateform.sys.contentType.sys.id': "categories", //works
+        'fields.plateform.fields.slug[match]': 'tiktok-and-reel',   
         // order: 'sys.createdAt',                    
-        limit: perPage,                            // Limit the number of items per page
-        skip: offset,                              // Skip to the correct offset based on the current page
-        // include: 1                                 
+        limit: perPage,                           
+        skip: offset,                              
+                                      
       },
       { next: { revalidate: 0 } }
     );
