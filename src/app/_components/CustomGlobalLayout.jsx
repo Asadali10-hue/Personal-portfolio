@@ -28,7 +28,7 @@ const CustomGlobalLayout = ({children}) => {
     <>
     {/* <Nav/> */}
     <NavTest/>
-    <ReactLenis root options={{lerp: 0.03, duration: 2.5, smoothTouch: true}}>
+    <ReactLenis root options={{lerp: 0.04, duration: 2.5, }}>
         {children}
         <Footer/>
     </ReactLenis>

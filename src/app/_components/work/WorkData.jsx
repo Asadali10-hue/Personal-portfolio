@@ -8,18 +8,12 @@ import { useSearchParams } from 'next/navigation'
 import { cn } from "@/lib/utils";
 
 
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
-
 
 
 
 
 import Link from "next/link";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, XIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   HoveredLink,
@@ -27,6 +21,9 @@ import {
   MenuItem,
   ProductItem,
 } from "@/components/ui/navbar-menu";
+import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
+import { animationVariants } from "@/lib/popopAnimation";
 
 
 const VideReact = dynamic(() => import("./ReacttVideo"), {
@@ -38,6 +35,10 @@ const WorkData = () => {
   const [videos, setVideos]=useState([])
   const [total, setTotal]= useState()
   const [categories, setCategories]= useState([])
+  const [videoPopup, setVideoPopup]= useState(false)
+  const [videoLink, setVideoLink]= useState('')
+  const animationStyle = "from-center"
+  const selectedAnimation = animationVariants[animationStyle];
   const perPage = 9
 
   const searchParams = useSearchParams()
@@ -53,8 +54,8 @@ const WorkData = () => {
   useEffect(()=>{
     
     const getVideos = async()=>{
-      console.log(typeof currentCategory);
-      console.log(currentCategory);
+      // console.log(typeof currentCategory);
+      // console.log(currentCategory);
 
       try {
         const data = await contentfullvideos(currentPage, perPage, currentCategory);
@@ -78,6 +79,52 @@ const WorkData = () => {
   return (
     <section className="relative h-full w-full pb-32">
       <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+
+      {/* {videoPopup && 
+              
+              <div className="fixed z-[99999] bg-black/50 backdrop-blur-md inset-0 flex justify-center items-center">
+
+
+                   <div className="w-full max-w-4xl aspect-video  pointer-events-auto">
+                <VideReact
+                  video={`https://www.youtube.com/watch?v=${videoLink}`}
+                  style={{ height: "100%", width: "100%" }}
+                  
+                />
+              </div> 
+              </div>
+              } */}
+
+<AnimatePresence>
+        {videoPopup && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            onClick={() => setVideoPopup(false)}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md">
+            <motion.div
+              {...selectedAnimation}
+              transition={{ type: "spring", damping: 30, stiffness: 300 }}
+              className="relative h-[50vh] w-full max-w-4xl aspect-video mx-4 md:mx-0">
+              <motion.button
+                className="absolute -top-16 right-0 text-white text-xl bg-neutral-900/50 ring-1 backdrop-blur-md rounded-full p-2 dark:bg-neutral-100/50 dark:text-black">
+                <XIcon className="size-5" />
+              </motion.button>
+              <div
+                className="size-full border-2 border-white rounded-2xl overflow-hidden isolate z-[1] relative">
+
+<VideReact
+                  video={`https://www.youtube.com/watch?v=${videoLink}`}
+                  style={{ height: "100%", width: "100%" }}
+                  
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
     <div className="min-h-screen   container px-2 mx-auto">
       <div className="mx-auto  flex justify-center">
         <div className="relative w-full flex items-center justify-center">
@@ -86,19 +133,44 @@ const WorkData = () => {
       </div>
       <div className="mt-32 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ">
         {videos?.map((item, idx) => {
+
+          const videoThumb = item.fields?.videoUrl.slice(-11)
+          console.log(videoThumb);
+
+          const handleClick = (videoId) => {
+            console.log("Video ID:", videoId);
+            setVideoLink(videoId)
+            setVideoPopup(!videoPopup)
+            // Perform any other action with the videoId (like setting state, navigating, etc.)
+          };
+
           return (
             <BlurFade
               key={item.sys.id}
               delay={0.25 + idx * 0.05}
               inView
-              className="text-white overflow-hidden rounded-md"
+              className="text-white overflow-hidden rounded-md relative cursor-pointer"
             >
-              <div className="!h-[250px] !w-full]  pointer-events-auto" >
+              {/* <div className="!h-[250px] !w-full]  pointer-events-auto">
                 <VideReact
                   video={item.fields?.videoUrl}
                   style={{ height: "100%", width: "100%" }}
+                  
                 />
+              </div> */}
+
+              <div className="!h-[250px] w-full">
+
+                <Image src={`https://img.youtube.com/vi/${videoThumb}/maxresdefault.jpg`} width={500} height={250} alt='' className="h-full w-full object-cover" 
+                
+                onClick={() => handleClick(videoThumb)}
+                />
+
               </div>
+
+              
+
+
 
               <div className="py-8 flex items-center gap-4">
                 <Avatar>
@@ -277,7 +349,7 @@ const WorkData = () => {
         </ul>
       </div>
     </div>
-
+    
     </section>
   );
 };
@@ -306,7 +378,7 @@ function FilterCategory({ className, categories }) {
               // >
               //   {category.fields.title}
               // </Link>
-              <h1>Hello world</h1>
+              <h1 key={category.sys.id}>Hello world</h1>
               )
             })}
           </ul>
