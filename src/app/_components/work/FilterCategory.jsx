@@ -18,6 +18,8 @@ import { useState, useEffect } from "react";
 export function FilterCategory({ className}) {
     const [active, setActive] = useState(null);
     const [categories, setCategories] = useState([]);
+  const [categoryName, setCategoryName]= useState('Real Estate')
+
 
 
     useEffect(()=>{
@@ -47,7 +49,9 @@ export function FilterCategory({ className}) {
           <MenuItem
             setActive={setActive}
             active={active}
-            item="Pick your industry"
+            item={
+               'Pick your Category'
+              }
             className=""
           >
             <ul className="grid w-fit gap-3 p-4 md:w-[500px] grid-cols-2  md:grid-cols-2 lg:grid-cols-3 lg:w-[600px]">

@@ -11,6 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { animationVariants } from "@/lib/popopAnimation";
 import { FilterCategory } from "./FilterCategory";
 import PaginationComponent from "../PaginationComponent";
+import logo from '../../../../assets/logo/logoNoBg.png'
 
 const VideReact = dynamic(() => import("./ReacttVideo"), {
   ssr: false,
@@ -113,7 +114,7 @@ const WorkData = () => {
                 key={item.sys.id}
                 delay={0.25 + idx * 0.05}
                 inView
-                className="text-white overflow-hidden text-center mx-auto rounded-md relative cursor-pointer"
+                className="text-white overflow-hidden text-center mx-auto rounded-md relative cursor-pointer !hover:translate-y-10"
               >
                 <div className="!h-[250px] w-full">
                   <Image
@@ -128,7 +129,7 @@ const WorkData = () => {
 
                 <div className="py-8 flex items-center gap-4">
                   <Avatar>
-                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarImage src={logo.src} />
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                   <p className="font-main font-medium text-base lg:text-lg">
@@ -143,6 +144,7 @@ const WorkData = () => {
           currentPage={currentPage}
           total={total}
           perPage={perPage}
+          industry={currentCategory}
         />
       </div>
     </section>
