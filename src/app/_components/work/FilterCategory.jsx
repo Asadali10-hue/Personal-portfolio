@@ -61,6 +61,7 @@ export function FilterCategory({ className}) {
                   <Link
                   key={category.sys.id}
                   href={`/our-work?page=1&industry=${category.fields.slug}`}
+                  onClick={()=>setActive(false)}
                 >
                   {category.fields.title}
                 </Link>
