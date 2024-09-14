@@ -43,12 +43,12 @@ export function FilterCategory({ className}) {
 
     return (
       <div className={cn("  max-w-2xl mx-auto z-10", className)}>
-        <Menu setActive={setActive} className="w-fit bg-red-500">
+        <Menu setActive={setActive} className="w-fit">
           <MenuItem
             setActive={setActive}
             active={active}
             item="Pick your industry"
-            className="bg-red-500"
+            className=""
           >
             <ul className="grid w-fit gap-3 p-4 md:w-[500px] grid-cols-2  md:grid-cols-2 lg:grid-cols-3 lg:w-[600px]">
               {categories?.map((category)=>{
