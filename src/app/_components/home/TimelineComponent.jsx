@@ -6,7 +6,7 @@ export function TimelineComponent() {
       title: "01",
       content: (
         <div>
-          <p className="text-white text-md md:text-xl lg:text-3xl font-bold mb-4 line-clamp-2">
+          <p className="timelineText">
           Setting up foundation
           </p>
           <div className="mb-8">
@@ -21,7 +21,7 @@ export function TimelineComponent() {
       title: "02",
       content: (
         <div>
-          <p className="text-white text-md md:text-xl lg:text-3xl font-bold mb-4 line-clamp-2">
+          <p className="timelineText">
           Research and ideation
           </p>
           <div className="mb-8">
@@ -36,7 +36,7 @@ export function TimelineComponent() {
       title: "03",
       content: (
         <div>
-          <p className="text-white text-md md:text-xl lg:text-3xl font-bold mb-4 line-clamp-2">
+          <p className="timelineText">
           Scripting
           </p>
           <div className="mb-8">
@@ -51,7 +51,7 @@ export function TimelineComponent() {
       title: "04",
       content: (
         <div>
-          <p className="text-white text-md md:text-xl lg:text-3xl font-bold mb-4 line-clamp-2">
+          <p className="timelineText">
           Editing and distribution
           </p>
           <div className="mb-8">
@@ -65,7 +65,7 @@ export function TimelineComponent() {
       title: "05",
       content: (
         <div>
-          <p className="text-white text-md md:text-xl lg:text-3xl font-bold mb-4 line-clamp-2">
+          <p className="timelineText">
           Organic marketing funnel
 setup
           </p>
@@ -84,7 +84,7 @@ setup
   return (
     <section className="w-full bg-neutral-950 overflow-clip" id='process'>
 
-    <div className="max-w-5xl mx-auto ">
+    <div className="max-w-7xl mx-auto ">
       <Timeline data={data} />
     </div>
     </section>

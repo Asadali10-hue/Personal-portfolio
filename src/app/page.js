@@ -10,15 +10,12 @@ import dynamic from "next/dynamic";
 import { TimelineComponent } from "./_components/home/TimelineComponent";
 import PortolioLink from "./_components/home/PortolioLink";
 import ShowcaseVideos from "./_components/home/ShowcaseVideos";
+import { LongVideosParallax } from "./_components/home/LongVideosParallax";
 
-const CtaDynamic = dynamic(()=> import('./_components/home/CalendarComponent'), {
-  ssr: false,
-  loading: ()=> <p className="text-white">Loading...</p>
-})
 
 export default function Home() {
   return (
-  <div className="relative ">
+  <div className="relative">
    {/* <Hiro1/> */}
    <Hiro2/>
    <Trusted/>
@@ -27,6 +24,7 @@ export default function Home() {
 
    <PromVideo/>
    </div>
+   <LongVideosParallax/>
    <ShowcaseVideos/>
    <PortolioLink/>
    <TimelineComponent/>

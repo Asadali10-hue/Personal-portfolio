@@ -11,32 +11,38 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import camera from '../../../../assets/perks/cameragif.gif'
+import hour from '../../../../assets/perks/hour.gif'
+import rocket from '../../../../assets/perks/rocket.gif'
+import team from '../../../../assets/perks/team.gif'
+import motionGif from '../../../../assets/perks/motionGif.gif'
+import customer from '../../../../assets/perks/customer.gif'
 
 export function FeaturesSection() {
   const features = [
     {
       title: "Videos that makes you millions",
-      icon: <Video className="size-24" strokeWidth={0.75} />,
+      icon: camera,
     },
     {
       title: "Become a well know personality in your market",
-      icon: <Rocket className="size-24" strokeWidth={0.75} />,
+      icon: rocket,
     },
     {
       title: "Build a lifetime asset of personal brand",
-      icon: <Hourglass className="size-24" strokeWidth={0.75} />,
+      icon: hour,
     },
     {
       title: "Gets a professional team that you can trust",
-      icon: <Users className="size-24" strokeWidth={0.75} />,
+      icon: team,
     },
     {
       title: "Grow even faster than flash with our editing",
-      icon: <Zap className="size-24" strokeWidth={0.75} />,
+      icon: motionGif,
     },
     {
       title: "Get organic leads and monetize on autopilot",
-      icon: <Magnet className="size-24" strokeWidth={0.75} />,
+      icon: customer,
     },
   ];
   return (
@@ -64,7 +70,8 @@ const Feature = ({ title, description, icon, index }) => {
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-800 to-transparent pointer-events-none" />
       )}
       <motion.span initial={{rotate: 20}} whileInView={{rotate:0}} transition={{duration: .5, delay: .5}} viewport={{amout:'all'}} className="mb-4 relative z-10 px-10 text-whitesize-32 !text-4xl">
-        {icon}
+        <Image unoptimized alt='' src={icon} className="w-32"/>
+        {/* {icon} */}
       </motion.span>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
         <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-700 group-hover/feature:bg-main transition-all duration-200 origin-center" />

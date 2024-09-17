@@ -46,10 +46,10 @@ export const PromVideo = () => (
         />
       </div>
       <div className="relative flex flex-col gap-2">
-        <div className="lg:mr-32">Videos</div>
-        <div className="font-bold text-main lg:ml-56">that makes</div>
-        <div className="lg:mr-40">your brand spread</div>
-        <div className="font-bold text-main">like wildfire</div>
+        <div className="lg:mr-32 xl:text-[60px]">Videos</div>
+        <div className="font-bold text-main lg:ml-56 xl:text-[80px]">that makes</div>
+        <div className="lg:mr-40 xl:text-[60px]">your brand spread</div>
+        <div className="font-bold text-main xl:text-[80px]">like wildfire</div>
         <p className="font-semibold text-white max-w-xl xl:max-w-3xl xl:text-xl mx-auto text-xs sm:text-sm md:text-md md:max-w-[350px] mt-5 lg:mt-10 text-center font-second">
         Our system bring you consistent organic followers and predictably turn them into paying customers!
 

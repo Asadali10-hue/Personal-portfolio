@@ -69,7 +69,9 @@
   body{
     @apply scroll-smooth
   }
-
+.timelineText{
+  @apply text-white text-2xl whitespace-nowrap py-5 md:text-xl lg:text-5xl  font-bold mb-4 line-clamp-2
+}
   .mainTitleAjusted{
 
     @apply animate-fade-in  mainTitle leading-none tracking-wide text-white font-main font-bold [--animation-delay:200ms]

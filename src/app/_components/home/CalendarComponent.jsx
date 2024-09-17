@@ -5,7 +5,7 @@ import CalComponent from "../CalComponent";
 
 const CalendarComponent = () => {
   return (
-    <section className="min-h-screen" id='book'>
+    <section className="min-h-screen !pointer-events-auto" id='book'>
       <div className="container mx-auto px-2">
         <div className="mt-10 md:mt-20">
           <Marquee className="" speed={100}>

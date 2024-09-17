@@ -128,9 +128,9 @@ const WorkData = () => {
                 </div>
 
                 <div className="py-8 flex items-center gap-4">
-                  <Avatar>
+                  <Avatar className="">
                     <AvatarImage src={logo.src} />
-                    <AvatarFallback>CN</AvatarFallback>
+                    <AvatarFallback>RF</AvatarFallback>
                   </Avatar>
                   <p className="font-main font-medium text-base lg:text-lg">
                     {item.fields?.title}

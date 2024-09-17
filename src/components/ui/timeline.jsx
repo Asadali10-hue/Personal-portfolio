@@ -39,20 +39,24 @@ export const Timeline = ({
            <div className="absolute -right-12 animate-spin [animation-duration:10s]">
                <Image alt="star" src={star} className="fill-main size-5  opacity-80"/>
            </div>
-               <div className="text-main font-bold mr-2 relative">
-               Simple
-               </div>
-               <div className="text-white">
 
-               5-steps
+           <div className="flex items-center">
+
+               <div className="text-main font-bold mr-2 relative xl:text-[80px]">
+               Simple 
+               </div>
+               <div className="text-white whitespace-nowrap xl:text-[60px]">
+
+               5-steps process
                </div>
            </div>
-           <div className="relative text-white">
+           </div>
+           <div className="relative text-white  whitespace-nowrap xl:text-[60px] lg:mt-5">
            <div className="absolute -bottom-10 left-1/2">
                <Image alt="star" src={star} className="size-8 animate-pulse [animation-duration:5s]"/>
            </div>
-           process to make <br className="md:hidden"/> your brand
-           <span className="font-bold text-main">
+           to make <br className="md:hidden"/> your brand
+           <span className="font-bold text-main ml-2 xl:text-[80px]">
 
            Go Big!
            </span>

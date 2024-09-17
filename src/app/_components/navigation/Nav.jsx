@@ -99,7 +99,7 @@ export function Nav() {
 
   return (
     <>
-      <header className="animate-fade-in fixed left-0 top-0 z-50 w-full bg-black/30 -translate-y-4 border-b opacity-0 backdrop-blur-md [--animation-delay:600ms]">
+      <header className="animate-fade-in fixed left-0 top-0 z-50 w-full bg-black/30 -translate-y-4 border-b opacity-0 backdrop-blur-md [--animation-delay:600ms] ">
         <div className="container flex h-14 items-center justify-between">
           <Link className="text-md flex items-center" href="/">
             <Image src={logo} alt='logo' className='w-36'/>

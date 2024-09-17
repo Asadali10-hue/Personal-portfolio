@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import { BorderBeam } from '@/components/magicui/border-beam'
 import { CardSpotlight } from '@/components/ui/card-spotlight'
 import { Separator } from '@/components/ui/separator'
 
@@ -21,6 +20,7 @@ const Views = () => {
 
   return (
     <section className='py-32 px-2 overflow-hidden'>
+
 
     <CardSpotlight className="relative max-w-[96rem] mx-auto px-2 flex h-fit py-5 w-full   rounded-lg border-8 bg-black md:shadow-xl">
     <div className="w-full relative mt-2 whitespace-pre-wrap bg-gradient-to-b from-white to-gray-300/80 bg-clip-text text-center text-3xl md:text-4xl font-semibold leading-none text-transparent">
@@ -45,7 +45,6 @@ const Views = () => {
       <p className='h-fit mt-10 md:mt-20 py-2 font-main text-white font-bold  lg:text-[2.5rem]'>and counting...</p>
     </div>
       
-      <BorderBeam size={550} duration={12} delay={9} />
     </CardSpotlight>
     </section>
   )
