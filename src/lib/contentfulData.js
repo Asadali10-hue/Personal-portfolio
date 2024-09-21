@@ -64,3 +64,22 @@ export const client = createClient({
       return [];
     }
   };
+
+
+  export const contentfullUsers= async () => {
+ 
+    try {
+      const response = await client.getEntries({
+        content_type: 'users', 
+                                  
+                                      
+      },
+      { next: { revalidate: 0 } }
+    );
+      
+      return { items: response.items };  // Return filtered items
+    } catch (error) {
+      console.error('Error fetching Contentful entries:', error);
+      return [];
+    }
+  };

@@ -15,7 +15,7 @@ import { Youtube, Instagram } from 'lucide-react';
 export const trusted = [
     {
         id: uuidv4(), 
-        total: '1.5M +',
+        total: '2.5M +',
         image: creator1,
         url: 'https://www.youtube.com/@learnwithshopify',
         icon: Youtube

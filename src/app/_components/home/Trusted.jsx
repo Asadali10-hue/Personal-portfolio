@@ -1,9 +1,10 @@
-'use client'
+// 'use client'
 import { trusted } from '@/data/trusted'
 import React from 'react'
 import TrustedCard from '../trusted/TrustedCard'
 import dynamic from 'next/dynamic'
 import { Skeleton } from '@/components/ui/skeleton'
+import { contentfullUsers } from '@/lib/contentfulData'
 
 const TrustedCardDynamic = dynamic(() => import ('../trusted/TrustedCard'),{
   ssr: false,
@@ -15,14 +16,18 @@ const TrustedCardDynamic = dynamic(() => import ('../trusted/TrustedCard'),{
 </div>
 })
 
-const Trusted = () => {
+const Trusted = async() => {
+  const data = await contentfullUsers()
+  const contentFullData = data.items
+
+  console.log(contentFullData);
   return (
     <section className='h-fit py-32'>
       <div className='container px-2 flex flex-wrap justify-center gap-16'>
 
-      {trusted.map((user)=>{
+      {contentFullData.map((user, index)=>{
         return(
-          <TrustedCardDynamic key={user.id} user={user}/>
+          <TrustedCardDynamic key={user.sys.id} user={user} index={index}/>
         )
       })}
       </div>
