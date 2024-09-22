@@ -1,45 +1,56 @@
 "use client";
 
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import dynamic from "next/dynamic";
 import React from "react";
+const WistiaDynamic = dynamic(() => import("./WistiaVideo"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+import WistiaVideo from "./WistiaVideo";
+import Marquee from "react-fast-marquee";
+import { MagicCard } from "@/components/magicui/magic-card";
 
-export function SecondColmnShowcase() {
+export function SecondColmnShowcase({ data }) {
   return (
-    (<div
-      className="rounded-md flex flex-col antialiased bg-black  items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
-    </div>)
+    <div className="mt-20">
+
+<Marquee pauseOnHover autoFill direction="right" className="flex items-center gap-4">
+
+    {data?.map((review, index)=>{
+      return(
+        <div className="px-4" key={review.sys.id}>
+
+        <div  className='flex  gap-4 bg-[#1c1c1c] p-2 rounded-md border border-main'>
+        <div className="rounded-md flex flex-col antialiased bg-black  items-center justify-center relative">
+          <Card className="p-0 w-[200px] md:w-[150px] xl:w-[210px] md:right-10 bg-black overflow-hidden">
+            <CardContent className="p-0">
+              <div className="aspect-w-9 aspect-h-16 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
+                <WistiaVideo id={review.fields.url} />
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="max-w-[270px] bg-main/50 p-2 rounded-md flex items-center">
+          <blockquote>
+
+            <span className="text-white font-medium text-lg">{review.fields.review}</span>
+          </blockquote>
+        </div>
+      </div>
+        </div>
+
+)
+})}
+</Marquee>
+
+
+
+
+
+    </div>
   );
 }
 
-const testimonials = [
-  {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
-  },
-  {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
-  },
-  {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
-  },
-];
+

@@ -20,7 +20,6 @@ const Trusted = async() => {
   const data = await contentfullUsers()
   const contentFullData = data.items
 
-  console.log(contentFullData);
   return (
     <section className='h-fit py-32'>
       <div className='container px-2 flex flex-wrap justify-center gap-16'>

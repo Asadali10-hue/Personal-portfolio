@@ -1,8 +1,13 @@
 import React from 'react'
 import { FirstColumnShowCase } from './FirstColumnShowCase'
 import { SecondColmnShowcase } from './SecondColmnShowcase'
+import { contentfullShortReviews } from '@/lib/contentfulData'
 
-const ShowcaseVideos = () => {
+const ShowcaseVideos = async() => {
+  const getShortVideo = await contentfullShortReviews()
+  const data = getShortVideo.items
+
+  console.log(data);
   return (
     <section className='py-32 w-full' id='results'>
         <h2 className="mainTitleText text-center mb-10">
@@ -10,7 +15,7 @@ const ShowcaseVideos = () => {
         </h2>
         <div className=''>
             <FirstColumnShowCase/>
-            <SecondColmnShowcase/>
+            <SecondColmnShowcase data={data}/>
         </div>
     </section>
   )

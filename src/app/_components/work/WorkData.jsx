@@ -104,7 +104,6 @@ const WorkData = () => {
             const videoThumb = item.fields?.videoUrl.slice(-11);
 
             const handleClick = (videoId) => {
-              console.log("Video ID:", videoId);
               setVideoLink(videoId);
               setVideoPopup(!videoPopup);
             };

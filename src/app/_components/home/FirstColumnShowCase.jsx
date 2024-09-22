@@ -1,45 +1,68 @@
 "use client";
 
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import React from "react";
+import { MagicCard } from "@/components/magicui/magic-card";
+import { reviewsLong } from "@/data/longReviews";
+import React, { useState } from "react";
+// import Marquee from "react-fast-marquee";
+import Marquee from "react-fast-marquee";
+import ReactPlayer from "react-player";
+import { Quote } from "lucide-react";
+
 
 export function FirstColumnShowCase() {
+  const [playingIndex, setPlayingIndex] = useState(null);
+
+  const togglePlayPause = (index) => {
+    // Toggle play/pause for the clicked video, and pause all others
+    setPlayingIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
-    (<div
-      className="rounded-md flex flex-col antialiased bg-black  items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
-    </div>)
+    <div className="">
+      <Marquee pauseOnHover className="flex items-center gap-4">
+        {reviewsLong.map((review, index) => {
+          return (
+            <div key={review.id} className="px-2 ">
+              <MagicCard className=" w-full h-full  xl:w-[400px] md:w-[200px]">
+                <div className="relative w-full md:w-[200px] md:h-[300px] h-full  xl:w-[400px] ">
+                  {" "}
+                  {/* Increased to max-w-2xl for larger videos */}
+                  {/* <div
+                    className="bg-red-500 opacity-0 absolute inset-0 z-10"
+                    onClick={() => togglePlayPause(review.id)}
+                  ></div> */}
+                  <ReactPlayer
+                    url={review.url}
+                    pip
+                    className=""
+                    controls={false}
+                    playing={playingIndex === review.id}
+                     width="100%"
+      height="100%"
+                  />
+                </div>
+                <div className="text-white p-2 md:p-4 m-2 rounded-md ">
+                
+                <blockquote className='text-xs md:text-base relative'>
+                  <Quote className="absolute text-muted-foreground opacity-40 -top-2"/>
+                  <span className="relative">
+
+                  {review.review}
+                  </span>
+                </blockquote>
+
+                <p className="mt-5 md:mt-10 font-medium text-muted-foreground">
+                  {review.name}
+                </p>
+                  
+                </div>
+              </MagicCard>
+            </div>
+          );
+        })}
+      </Marquee>
+    </div>
   );
 }
 
-const testimonials = [
-  {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
-  },
-  {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
-  },
-  {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
-  },
-];
+

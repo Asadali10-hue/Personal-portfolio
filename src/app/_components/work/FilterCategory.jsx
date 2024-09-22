@@ -29,7 +29,6 @@ export function FilterCategory({ className}) {
     
           try {
             const data = await contentfullvideosCategories();
-            console.log(data);
             setCategories(data.items)
             
           } catch (error) {
@@ -56,7 +55,6 @@ export function FilterCategory({ className}) {
           >
             <ul className="grid w-fit gap-3 p-4 md:w-[500px] grid-cols-2  md:grid-cols-2 lg:grid-cols-3 lg:w-[600px]">
               {categories?.map((category)=>{
-                console.log(category);
                 return(
                   <Link
                   key={category.sys.id}

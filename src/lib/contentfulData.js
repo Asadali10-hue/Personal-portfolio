@@ -83,3 +83,21 @@ export const client = createClient({
       return [];
     }
   };
+  
+  export const contentfullShortReviews= async () => {
+ 
+    try {
+      const response = await client.getEntries({
+        content_type: 'shortreviewvideos',
+                                  
+                                      
+      },
+      { next: { revalidate: 0 } }
+    );
+      
+      return { items: response.items };  // Return filtered items
+    } catch (error) {
+      console.error('Error fetching Contentful entries:', error);
+      return [];
+    }
+  };
