@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { FirstColumnShowCase } from './FirstColumnShowCase'
 import { SecondColmnShowcase } from './SecondColmnShowcase'
@@ -7,7 +8,6 @@ const ShowcaseVideos = async() => {
   const getShortVideo = await contentfullShortReviews()
   const data = getShortVideo.items
 
-  console.log(data);
   return (
     <section className='py-32 w-full' id='results'>
         <h2 className="mainTitleText text-center mb-10">

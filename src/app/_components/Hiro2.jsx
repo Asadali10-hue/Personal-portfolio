@@ -22,7 +22,7 @@ const Hiro2 = () => {
             <h1 className="mainTitleAjusted">
             We Give
             </h1>
-            <h2 className="animate-fade-in w-fit  z-50 mx-auto blurTest  border-b opacity-0 [--animation-delay:600ms] mt-5 rounded-full px-8 py-2 lg:px-10 lg:py-4 border-8 border-slate-500">
+            <h2 className="animate-fade-in w-fit  z-50 mx-auto bg-white opacity-0 [--animation-delay:600ms] mt-5 rounded-full px-8 py-2 lg:px-10 lg:py-4 ">
 
              <span className="!text-main font-bold text-4xl lg:mainTitleAjusted">
              Brands a Visual
@@ -55,17 +55,17 @@ const Hiro2 = () => {
         </div>
       </div>
       <div className="absolute left-0 top-0 -z-[1] h-[900px] w-full overflow-hidden md:h-[1400px]">
-        <div className="absolute left-0 top-0 z-10 h-[500px] w-full bg-gradient-to-b from-black to-transparent"></div>
+        {/* <div className="absolute left-0 top-0 z-10 h-[500px] w-full bg-gradient-to-b from-black to-transparent"></div>
         <div className="absolute -right-[660px] top-0 z-10 h-[700px] w-[1400px] rotate-45 bg-gradient-to-b from-black to-transparent"></div>
-        <div className="absolute -right-[1000px] top-0 z-10 h-[200px] w-[1400px] rotate-45 bg-black"></div>
-        <div
-          className="absolute inset-0 h-full w-full min-w-[1000px] bg-no-repeat"
-          style={{
-            background:
-              "radial-gradient(211.5% 113.1% at -66.4% 35.9%, rgb(0, 0, 0) 39.132%, rgb(0, 0, 0) 39.4243%, rgb(153, 0, 255) 67.5951%, #8806cd 84.1832%)",
-            opacity: 1,
-          }}
-        ></div>
+        <div className="absolute -right-[1000px] top-0 z-10 h-[200px] w-[1400px] rotate-45 bg-black"></div> */}
+  <div
+  className="absolute inset-0 h-full w-full min-w-[1000px] bg-no-repeat"
+  style={{
+    background: 
+      "radial-gradient(circle at bottom, #8806cd 10%, rgb(0, 0, 0) 60%)",
+    opacity: 1,
+  }}
+></div>
       </div>
     </section>
   );

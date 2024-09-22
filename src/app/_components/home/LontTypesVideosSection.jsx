@@ -8,7 +8,7 @@ const LontTypesVideosSection = ({ products }) => {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 container mx-auto px-2">
         {products.map((product, index) => {
           return (
-              <Parallax speed={5 * index} key={product.id} >
+              <Parallax speed={5 * ((index + 1) * 5)} key={product.id} >
             <div
               
               className="group/product h-fit relative flex-shrink-0 w-full"
