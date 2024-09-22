@@ -8,6 +8,8 @@ import { easeInOut, motion } from 'framer-motion'
 
 const TrustedCard = ({user, index}) => {
 
+  console.log(user);
+
   const animationUser = {
     initial:{
       opacity: 0,
@@ -45,7 +47,7 @@ const TrustedCard = ({user, index}) => {
               )}
             </div>
         <div className=' rounded-full size-24 md:size-44 overflow-hidden '>
-            <Image src={`https://${user.fields.image?.fields.file.url}`} alt='user image' width={200} quality={100} height={200}  className='h-full w-full object-cover object-center grayscale group-hover:grayscale-0'/>
+            <Image src={`https:${user.fields.image?.fields.file.url}`} alt='user image' width={200} quality={100} height={200}  className='h-full w-full object-cover object-center grayscale group-hover:grayscale-0'/>
         </div>
         </Link>
         </Title>
