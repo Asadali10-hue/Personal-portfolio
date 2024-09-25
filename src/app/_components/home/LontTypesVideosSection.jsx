@@ -1,3 +1,4 @@
+'use client'
 import Script from "next/script";
 import React from "react";
 import { Parallax } from "react-scroll-parallax";

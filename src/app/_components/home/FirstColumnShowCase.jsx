@@ -7,6 +7,8 @@ import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import ReactPlayer from "react-player";
 import { Quote } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 
 export function FirstColumnShowCase() {
@@ -19,10 +21,10 @@ export function FirstColumnShowCase() {
 
   return (
     <div className="">
-      <Marquee pauseOnHover className="flex items-center gap-4">
+      <Marquee pauseOnHover autoFill className="flex items-center gap-4">
         {reviewsLong.map((review, index) => {
           return (
-            <div key={review.id} className="px-2 ">
+            <Link href={review.url} target="_blank" key={review.id} className="px-2 block">
               <MagicCard className=" w-full h-full  xl:w-[400px] md:w-[200px]">
                 <div className="relative w-full md:w-[200px] md:h-[300px] h-full  xl:w-[400px] ">
                   {" "}
@@ -31,7 +33,7 @@ export function FirstColumnShowCase() {
                     className="bg-red-500 opacity-0 absolute inset-0 z-10"
                     onClick={() => togglePlayPause(review.id)}
                   ></div> */}
-                  <ReactPlayer
+                  {/* <ReactPlayer
                     url={review.url}
                     pip
                     className=""
@@ -39,7 +41,8 @@ export function FirstColumnShowCase() {
                     playing={playingIndex === review.id}
                      width="100%"
       height="100%"
-                  />
+                  /> */}
+                  <Image src={review.image} className="h-full w-full object-cover object-center"/>
                 </div>
                 <div className="text-white p-2 md:p-4 m-2 rounded-md ">
                 
@@ -57,7 +60,7 @@ export function FirstColumnShowCase() {
                   
                 </div>
               </MagicCard>
-            </div>
+            </Link>
           );
         })}
       </Marquee>

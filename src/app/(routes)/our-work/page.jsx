@@ -1,7 +1,6 @@
 import CallToActionSection from '@/app/_components/home/CallToActionSection';
 import WorkData from '@/app/_components/work/WorkData';
-import WorkHeader from '@/app/_components/work/WorkHeader';
-import { contentfullvideos } from '@/lib/contentfulData'
+import WorkHeader from "@/app/_components/work/WorkHeader";
 import React, { Suspense } from 'react'
 
 const OurWork = async() => {
@@ -10,7 +9,6 @@ const OurWork = async() => {
     <main className='min-h-screen relative'>
       <WorkHeader/>
       <Suspense fallback={<p className='text-white'>Loading...</p>}>
-
       <WorkData/>
       </Suspense>
       <CallToActionSection/>

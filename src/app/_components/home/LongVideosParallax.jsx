@@ -22,23 +22,6 @@ export const products = [
  
     url: '63n9nytlfx'
   },
- 
-  {
-    id: 4,
-  
-      url: 'ovlp5grc92'
-  },
-
-  {
-    id: 5,
-    
-      url: 'zs8bxc17zv'
-  },
-  {
-    id: 6,
-    
-      url: '77h5hc2btt'
-  },
   {
     id: 7,
     
