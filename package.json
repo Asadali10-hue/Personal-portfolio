@@ -19,6 +19,7 @@
     "@react-three/fiber": "^8.17.6",
     "@studio-freight/react-lenis": "^0.0.47",
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "aos": "^2.3.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "contentful": "^10.15.0",

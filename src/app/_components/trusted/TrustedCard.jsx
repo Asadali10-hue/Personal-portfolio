@@ -8,7 +8,6 @@ import { easeInOut, motion } from 'framer-motion'
 
 const TrustedCard = ({user, index}) => {
 
-  console.log(user);
 
   const animationUser = {
     initial:{

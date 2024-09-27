@@ -11,29 +11,25 @@ import { TimelineComponent } from "./_components/home/TimelineComponent";
 import PortolioLink from "./_components/home/PortolioLink";
 import ShowcaseVideos from "./_components/home/ShowcaseVideos";
 import { LongVideosParallax } from "./_components/home/LongVideosParallax";
-import Hiro1 from "./_components/Hiro1";
 
 
 export default function Home() {
   return (
-    <div className="relative">
-      {/* <Hiro1/> */}
+    <main className="relative">
       <Hiro2 />
-        <Trusted />
+      <Trusted />
       <Views />
-       <div className="overflow-hidden">
+      <div className="overflow-hidden">
         <PromVideo />
       </div>
-        <LongVideosParallax />
-
-      <ShowcaseVideos /> 
-
+      <LongVideosParallax />
+      <ShowcaseVideos />
       <PortolioLink />
       <TimelineComponent />
       <WhyInstagram />
       <Perks />
       <CalendarComponent />
       <CallToActionSection />
-    </div>
+    </main>
   );
 }

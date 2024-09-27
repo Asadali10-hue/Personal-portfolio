@@ -3,26 +3,47 @@
 import { useState, useEffect } from 'react';
 import { CardSpotlight } from '@/components/ui/card-spotlight'
 import { Separator } from '@/components/ui/separator'
+import { delay, motion } from 'framer-motion';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Views = () => {
   const [organicViews, setOrganicViews] = useState(75023489);
-  // Increment logic using useEffect
   useEffect(() => {
-    // Define the interval to increment the views by 1
-    const interval = setInterval(() => {
-      setOrganicViews((prevViews) => prevViews + 1); // Increase by 1
-    }, 2000); // Update every 2 seconds
+    // const interval = setInterval(() => {
+    //   setOrganicViews((prevViews) => prevViews + 1); 
+    // }, 2000); // Update every 2 seconds
 
-    // Cleanup the interval on component unmount
-    return () => clearInterval(interval);
+    // return () => clearInterval(interval);
+
+    AOS.init({duration:1200})
   }, []);
 
+
+  const variants = {
+    initial:{
+      opacity: 0,
+      scale: 0,
+    },
+    animate:{
+      // rotateX: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        // bounce: 0.4,
+        duration: 2,
+       
+      }
+
+    }
+  }
 
   return (
     <section className='py-32 px-2 overflow-hidden'>
 
-
-    <CardSpotlight className="relative max-w-[96rem] mx-auto px-2 flex h-fit py-5 w-full   rounded-lg border-8 bg-black md:shadow-xl">
+      <motion.div variants={variants} initial='initial' whileInView='animate'  className=''>
+    <CardSpotlight className="relative max-w-[96rem] mx-auto px-2 flex h-fit py-5 w-full   rounded-lg border-8 bg-black md:shadow-xl" >
     <div className="w-full relative mt-2 whitespace-pre-wrap bg-gradient-to-b from-white to-gray-300/80 bg-clip-text text-center text-3xl md:text-4xl font-semibold leading-none text-transparent">
       <span className='mx-auto w-full mt-5 whitespace-pre-wrap bg-gradient-to-b from-main to-main/30 bg-clip-text text-center font-second text-3xl md:text-4xl font-semibold leading-none text-transparent'>
         Unveiling Our Impact
@@ -46,6 +67,7 @@ const Views = () => {
     </div>
       
     </CardSpotlight>
+      </motion.div>
     </section>
   )
 }
