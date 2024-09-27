@@ -15,7 +15,7 @@ const ShowcaseVideos = async() => {
         </h2>
         <div className=''>
             <FirstColumnShowCase/>
-            {/* <SecondColmnShowcase data={data}/> */}
+            <SecondColmnShowcase data={data}/>
         </div>
     </section>
   )

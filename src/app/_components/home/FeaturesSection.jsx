@@ -70,7 +70,7 @@ const Feature = ({ title, description, icon, index }) => {
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-800 to-transparent pointer-events-none" />
       )}
       <motion.span initial={{rotate: 20}} whileInView={{rotate:0}} transition={{duration: .5, delay: .5}} viewport={{amout:'all'}} className="mb-4 relative z-10 px-10 text-whitesize-32 !text-4xl">
-        <Image unoptimized alt='' src={icon} className="w-32"/>
+        <Image unoptimized alt='icon' src={icon} className="w-32"/>
         {/* {icon} */}
       </motion.span>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">

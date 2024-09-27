@@ -4,7 +4,7 @@ const loading = () => {
   return (
     <div className='text-white fixed inset-0 bg-black flex items-center justify-center z-[9999999]'>
 
-<span class="loader"></span>
+<span className="loader"></span>
 
     </div>
   )

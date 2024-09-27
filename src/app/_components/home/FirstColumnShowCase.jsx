@@ -42,7 +42,7 @@ export function FirstColumnShowCase() {
                      width="100%"
       height="100%"
                   /> */}
-                  <Image src={review.image} className="h-full w-full object-cover object-center"/>
+                  <Image src={review.image} alt="image" className="h-full w-full object-cover object-center"/>
                 </div>
                 <div className="text-white p-2 md:p-4 m-2 rounded-md ">
                 
