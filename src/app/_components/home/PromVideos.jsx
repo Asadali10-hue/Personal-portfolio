@@ -22,7 +22,7 @@ export const PromVideo = () =>{
     const tl = gsap.timeline({
         scrollTrigger:{
           trigger: containerRef.current,
-          markers: true,
+          // markers: true,
           start: '2% 90%',
           end: '100%, 100%',
           scrub: true,
