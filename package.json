@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.0",
+    "@gsap/react": "^2.1.1",
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-hover-card": "^1.1.1",
     "@radix-ui/react-navigation-menu": "^1.2.0",
@@ -25,6 +26,7 @@
     "contentful": "^10.15.0",
     "embla-carousel-react": "^8.3.0",
     "framer-motion": "^11.3.30",
+    "gsap": "^3.12.5",
     "lenis": "^1.1.11",
     "lucide-react": "^0.435.0",
     "mini-svg-data-uri": "^1.4.4",

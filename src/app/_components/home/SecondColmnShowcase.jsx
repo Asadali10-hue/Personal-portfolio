@@ -17,7 +17,7 @@ export function SecondColmnShowcase({ data }) {
       return (
         <Link href={review.fields.url} className="px-4 block" key={review.sys.id}>
           <div className="flex  gap-4 bg-[#1c1c1c] p-2 rounded-md border border-main">
-            <div className="rounded-md flex flex-col antialiased bg-black  items-center justify-center relative">
+            <div className="rounded-md hidden md:flex flex-col antialiased bg-black  items-center justify-center relative">
               <Card className="p-0 w-[200px] md:w-[150px] xl:w-[210px] md:right-10 bg-black overflow-hidden border-none">
                 <CardContent className="p-0">
                   <div className="aspect-w-9 aspect-h-16 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
@@ -36,7 +36,7 @@ export function SecondColmnShowcase({ data }) {
 
             <div className="max-w-[270px] bg-main/50 p-2 rounded-md flex items-center">
               <blockquote>
-                <span className="text-white font-medium text-lg">
+                <span className="text-white text-xs md:text-sm font-medium xl-lg">
                   {review.fields.review}
                 </span>
               </blockquote>

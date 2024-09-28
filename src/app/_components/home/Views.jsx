@@ -39,15 +39,35 @@ const Views = () => {
     }
   }
 
+  const fadeAnim = {
+
+    initial:{
+      opacity: 0
+    },
+    animate:{
+      // rotateX: 0,
+      opacity: 1,
+      transition: {
+        // type: "spring",
+        // bounce: 0.4,
+        duration: 1,
+        delay: .2
+       
+      }
+
+    }
+
+  }
+
   return (
     <section className='py-32 px-2 overflow-hidden'>
 
       <motion.div variants={variants} initial='initial' whileInView='animate'  className=''>
     <CardSpotlight className="relative max-w-[96rem] mx-auto px-2 flex h-fit py-5 w-full   rounded-lg border-8 bg-black md:shadow-xl" >
     <div className="w-full relative mt-2 whitespace-pre-wrap bg-gradient-to-b from-white to-gray-300/80 bg-clip-text text-center text-3xl md:text-4xl font-semibold leading-none text-transparent">
-      <span className='mx-auto w-full mt-5 whitespace-pre-wrap bg-gradient-to-b from-main to-main/30 bg-clip-text text-center font-second text-3xl md:text-4xl font-semibold leading-none text-transparent'>
+      <motion.span variants={fadeAnim} initial='initial' whileInView='animate' className='mx-auto w-full mt-5 whitespace-pre-wrap bg-gradient-to-b from-main to-main/30 bg-clip-text text-center font-second text-3xl md:text-4xl font-semibold leading-none text-transparent'>
         Unveiling Our Impact
-      </span>
+      </motion.span>
 
       <div className='flex mx-auto items-center justify-center flex-col md:flex-row w-full mt-10 md:mt-20 gap-3 md:gap-5 lg:gap-16 min-h-fit'>
         <div className='flex flex-col gap-2 items-center'>

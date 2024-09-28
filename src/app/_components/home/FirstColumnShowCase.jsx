@@ -24,9 +24,14 @@ export function FirstColumnShowCase() {
       <Marquee pauseOnHover autoFill className="flex items-center gap-4">
         {reviewsLong.map((review, index) => {
           return (
-            <Link href={review.url} target="_blank" key={review.id} className="px-2 block">
-              <MagicCard className=" w-full h-full  xl:w-[400px] md:w-[200px]">
-                <div className="relative w-full md:w-[200px] md:h-[300px] h-full  xl:w-[400px] ">
+            <Link
+              href={review.url}
+              target="_blank"
+              key={review.id}
+              className="px-2 block "
+            >
+              <MagicCard className=" w-full h-full  xl:w-[400px] md:w-[300px]">
+                <div className="relative hidden md:block  w-full md:h-[200px] xl:h-[300px] h-full  xl:w-[400px] ">
                   {" "}
                   {/* Increased to max-w-2xl for larger videos */}
                   {/* <div
@@ -42,22 +47,21 @@ export function FirstColumnShowCase() {
                      width="100%"
       height="100%"
                   /> */}
-                  <Image src={review.image} alt="image" className="h-full w-full object-cover object-center"/>
+                  <Image
+                    src={review.image}
+                    alt="image"
+                    className="h-full w-full object-cover object-center"
+                  />
                 </div>
-                <div className="text-white p-2 md:p-4 m-2 rounded-md ">
-                
-                <blockquote className='text-xs md:text-base relative'>
-                  <Quote className="absolute text-muted-foreground opacity-40 -top-2"/>
-                  <span className="relative">
+                <div className="text-white p-2 md:p-4 m-2 rounded-md max-w-[250px]">
+                  <blockquote className="text-xs md:text-sm lg:text-base relative">
+                    <Quote className="absolute text-muted-foreground opacity-40 -top-2" />
+                    <span className="relative">{review.review}</span>
+                  </blockquote>
 
-                  {review.review}
-                  </span>
-                </blockquote>
-
-                <p className="mt-5 md:mt-10 font-medium text-muted-foreground">
-                  {review.name}
-                </p>
-                  
+                  <p className="mt-5 md:mt-10 text-xs ms:text-base font-medium text-muted-foreground">
+                    {review.name}
+                  </p>
                 </div>
               </MagicCard>
             </Link>
