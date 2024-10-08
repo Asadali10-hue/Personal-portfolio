@@ -9,7 +9,6 @@ const Hiro2 = () => {
     <section className="relative min-h-[80vh] w-full flex items-center overflow-hidden md:min-h-[92vh]">
       <div className="absolute left-0 top-0 h-full w-full"></div>
        <Particles className="absolute inset-0 " />
-      {/* <BackgroundBeams/> */}
       <div className="relative z-10 flex h-full w-full flex-col items-center justify-start px-sm pt-20 pb-10 text-center">
         <div className="max-w-6xl">
           <div
@@ -28,18 +27,7 @@ const Hiro2 = () => {
              Brands a Visual
                 </span> 
             </h2>
-            {/* <h2 className="animate-fade-in w-fit  z-50 mx-auto blurTest  border-b opacity-0 [--animation-delay:600ms]  rounded-full px-8 py-2 border">
-
-             <span className="!text-main text-3xl font-main font-bold md:mainAdjusted ">
-             a Visual
-                </span> 
-            </h2> */}
-            {/* <h2 className="animate-fade-in w-fit  z-50 mx-auto bg-black/30 sm:px-9 sticky top-0  backdrop-filter backdrop-blur-[20px]  border-b opacity-0 [--animation-delay:600ms]  rounded-full px-8 py-2 border">
-
-             <span className="!text-main text-3xl font-main font-bold md:mainAdjusted ">
-             Visual Story
-                </span> 
-            </h2> */}
+          
             </div>
             <p className="text-sm font-sans sm:text-base md:text-[18px] !text-white md:subTitle !line-clamp-3 mt-2 lg:mt-5">
               We help entrepreneurs and creators build, grow, and monetize their
