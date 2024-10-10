@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import logo from "../../../../public/logo.png";
-import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "@/data/navLinks";
 import Link from "next/link";
