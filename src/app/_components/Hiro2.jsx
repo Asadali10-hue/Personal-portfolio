@@ -1,12 +1,17 @@
+'use client'
 import React from "react";
 import CreatorsComposent from "./CreatorsComposent";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import Particles from "@/components/magicui/particles";
 import Link from "next/link";
+import CanvasCursor from "@/components/edil-ozi/canvas-cursor";
+import useCanvasCursor from "@/hooks/CanvasCursor";
 
 const Hiro2 = () => {
+  useCanvasCursor();
+
   return (
-    <section className="relative min-h-[80vh] w-full flex items-center overflow-hidden md:min-h-[92vh]">
+    <section className="relative min-h-[80vh] w-full flex items-center overflow-hidden md:min-h-[92vh]" >
       <div className="absolute left-0 top-0 h-full w-full"></div>
        <Particles className="absolute inset-0 " />
       <div className="relative z-10 flex h-full w-full flex-col items-center justify-start px-sm pt-20 pb-10 text-center">
@@ -55,6 +60,11 @@ const Hiro2 = () => {
   }}
 ></div>
       </div>
+      {/* <CanvasCursor/> */}
+      <canvas
+      className="pointer-events-none absolute inset-0"
+      id="canvas"
+    />
     </section>
   );
 };
