@@ -2,11 +2,14 @@ import React from 'react'
 import circle from '../../../../assets/icons/circle.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import { MoveUp, MoveUpRight } from 'lucide-react'
+import { MoveUpRight } from 'lucide-react'
 import { CursorComponent } from './CursorComponent'
+import { BlurIn } from '@/hooks/blurAnimation'
 
 const PortolioLink = () => {
   return (
+    <BlurIn>
+
     <section className='w-full min-h-fit py-32 px-2'>
         <div className='relative text-white container mx-auto p-8 lg:p-16 min-h-fit lg:min-h-fit rounded-xl overflow-hidden'>
         <div className="absolute top-0 z-[-2] inset-0 rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]">
@@ -40,6 +43,8 @@ const PortolioLink = () => {
 </div>
         </div>
     </section>
+    </BlurIn>
+
   )
 }
 

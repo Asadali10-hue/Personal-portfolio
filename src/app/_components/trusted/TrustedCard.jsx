@@ -29,9 +29,7 @@ const TrustedCard = ({user, index}) => {
     
     initial='initial'
     whileInView='animate'
-    // viewport={{
-    //   once: true,
-    // }}
+    
       custom={index}
     >
         <Title>

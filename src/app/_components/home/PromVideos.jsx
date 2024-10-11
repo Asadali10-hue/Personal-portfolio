@@ -10,6 +10,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { BlurIn } from "@/hooks/blurAnimation";
 gsap.registerPlugin(ScrollTrigger)
 
 export const PromVideo = () =>{
@@ -18,22 +19,20 @@ export const PromVideo = () =>{
 
   useGSAP(()=>{
 
-    gsap.set('.titleVideo', {opacity: 0.5, y:50})
+    gsap.set('.titleVideo', {y:50})
     const tl = gsap.timeline({
         scrollTrigger:{
           trigger: containerRef.current,
-          markers: true,
+          // markers: true,
           start: '2% 90%',
           end: '100%, 100%',
           scrub: true,
-          y:0,
           stagger: 0.1
         }
 
     })
 
     tl.to('.titleVideo', {
-      opacity: 1,
       y: 0,
       ease: 'power4.inOut'
     }, 'a')
@@ -44,6 +43,8 @@ export const PromVideo = () =>{
   }, {scope: containerRef})
 
   return (
+    <BlurIn>
+
     <div ref={containerRef}>
 
     <AnimatedGridBackgroundSection >
@@ -101,6 +102,8 @@ export const PromVideo = () =>{
           </div>
     </AnimatedGridBackgroundSection>
     </div>
+    </BlurIn>
+
   );
 } 
 

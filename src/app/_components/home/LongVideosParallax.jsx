@@ -2,13 +2,17 @@
 import React from "react";
 import LontTypesVideosSection from "./LontTypesVideosSection";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { BlurIn } from "@/hooks/blurAnimation";
 
 export function LongVideosParallax() {
   return( 
-    <ParallaxProvider>
+    <BlurIn>
+
+    <section id="results">
 
   <LontTypesVideosSection products={products} />
-    </ParallaxProvider>
+    </section>
+    </BlurIn>
 
 )
 }

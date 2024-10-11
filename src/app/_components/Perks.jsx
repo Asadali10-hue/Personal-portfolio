@@ -2,14 +2,17 @@ import React from "react";
 import star from '../../../assets/icons/star.svg'
 import Image from "next/image";
 import { FeaturesSection } from "./home/FeaturesSection";
+import { BlurIn } from "@/hooks/blurAnimation";
 
 const Perks = () => {
   return (
-    <section className="py-32 overflow-clip">
+    <BlurIn>
+
+    <section className="py-5 md:py-32 overflow-clip">
       <div className="container px-2 mx-auto text-white">
         <div className="text-4xl md:text-7xl relative font-medium  text-center flex flex-col font-main">
            
-            <div className="flex ml-32 relative w-fit">
+            <div className="flex ml-32 flex-col md:flex-row relative w-fit">
             <div className="absolute -left-12 animate-spin [animation-duration:10s]">
                 <Image alt="star" src={star} className="fill-main"/>
             </div>
@@ -35,11 +38,13 @@ const Perks = () => {
 
             {/* Feature section */}
 
-            <div className="mt-20 lg:mt-48">
+            <div className="mt-5 md:mt-20 lg:mt-48">
                 <FeaturesSection/>
             </div>
       </div>
     </section>
+    </BlurIn>
+
   );
 };
 

@@ -20,6 +20,7 @@ import Marquee from '@/components/magicui/marquee'
 import { Button } from '@/components/ui/button'
 import CtaButton from '../CtaButton';
 import Image from 'next/image';
+import { BlurIn } from '@/hooks/blurAnimation';
 const tiles = [
    {
       icon: <Youtube className="size-full text-rose-600" />,
@@ -128,6 +129,7 @@ export default function CallToActionSection() {
    }, [])
 
    return (
+
       <section id="cta">
          <div className="py-14">
             <div className="flex w-full flex-col items-center justify-center">
@@ -193,5 +195,6 @@ export default function CallToActionSection() {
             </div>
          </div>
       </section>
+
    )
 }

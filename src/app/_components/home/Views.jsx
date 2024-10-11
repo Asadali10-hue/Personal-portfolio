@@ -60,7 +60,7 @@ const Views = () => {
   }
 
   return (
-    <section className='py-32 px-2 overflow-hidden'>
+    <section className='py-10 md:py-32 px-2 overflow-hidden'>
 
       <motion.div variants={variants} initial='initial' whileInView='animate'  className=''>
     <CardSpotlight className="relative max-w-[96rem] mx-auto px-2 flex h-fit py-5 w-full   rounded-lg border-8 bg-black md:shadow-xl" >

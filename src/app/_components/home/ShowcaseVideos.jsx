@@ -3,13 +3,16 @@ import React from 'react'
 import { FirstColumnShowCase } from './FirstColumnShowCase'
 import { SecondColmnShowcase } from './SecondColmnShowcase'
 import { contentfullShortReviews } from '@/lib/contentfulData'
+import { BlurIn } from '@/hooks/blurAnimation'
 
 const ShowcaseVideos = async() => {
   const getShortVideo = await contentfullShortReviews()
   const data = getShortVideo.items
 
   return (
-    <section className='py-32 w-full' id='results'>
+    <BlurIn>
+
+    <section className='py-5 md:py-32 w-full' id='reviews'>
         <h2 className="mainTitleText text-center mb-10">
         Snippets of Satisfaction
         </h2>
@@ -18,6 +21,8 @@ const ShowcaseVideos = async() => {
             <SecondColmnShowcase data={data}/>
         </div>
     </section>
+    </BlurIn>
+
   )
 }
 

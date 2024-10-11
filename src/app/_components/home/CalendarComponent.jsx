@@ -2,9 +2,12 @@
 import Marquee from "react-fast-marquee";
 import Calendly from "./Calendly";
 import CalComponent from "../CalComponent";
+import { BlurIn } from "@/hooks/blurAnimation";
 
 const CalendarComponent = () => {
   return (
+    <BlurIn>
+
     <section className="min-h-screen !pointer-events-auto" id='book'>
       <div className="container mx-auto px-2">
         <div className="mt-10 md:mt-20">
@@ -23,6 +26,8 @@ const CalendarComponent = () => {
         </div>
       </div>
     </section>
+    </BlurIn>
+
   );
 };
 

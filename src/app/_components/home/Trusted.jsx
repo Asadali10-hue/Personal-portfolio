@@ -21,7 +21,7 @@ const Trusted = async() => {
   const contentFullData = data.items
 
   return (
-    <section className='h-fit py-32'>
+    <section className='h-fit py-5 md:py-32'>
       <div className='container px-2 flex flex-wrap justify-center gap-16'>
 
       {contentFullData.map((user, index)=>{

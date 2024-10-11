@@ -1,10 +1,43 @@
 'use client'
 import { cn } from "@/lib/utils";
 import Script from "next/script";
-import React from "react";
-import { Parallax } from "react-scroll-parallax";
+import React, { useRef } from "react";
+import gsap from 'gsap'
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
+
+
+
 
 const LontTypesVideosSection = ({ products }) => {
+
+  const containerVideo = useRef(null)
+
+  useGSAP(()=>{
+gsap.set('.element', {y:30})
+
+const tl = gsap.timeline({
+  scrollTrigger:{
+    trigger: containerVideo.current,
+    start: "10% 90%",
+    end: '100% 100%',
+    scrub: true,
+   markers: true,
+   stagger: 1
+
+  }
+})
+
+tl.to('.element', {
+  y:-30,
+  ease: 'power4.inOut',
+  stagger: 1
+
+
+}, 'a')
+  }, {scope: containerVideo})
+
 
   const getGridClasses = (index) => {
     switch (index) {
@@ -20,15 +53,14 @@ const LontTypesVideosSection = ({ products }) => {
   };
 
   return (
-    <div className="min-h-[100vh] flex items-center py-32">
+    <div className="min-h-[100vh] flex items-center py-10" ref={containerVideo}>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8  md:grid-cols-11 md:grid-rows-6 container mx-auto px-2">
         {products.map((product, index) => {
           console.log(index);
           return (
-            <Parallax
+            <div
             key={product.id}
-            speed={3 * ((index + 1))}
-              className={cn("group/product h-fit relative flex-shrink-0 w-full ", 
+              className={cn("group/product h-fit element relative flex-shrink-0 w-full ", 
                getGridClasses(index)
               )}
             >
@@ -55,7 +87,7 @@ const LontTypesVideosSection = ({ products }) => {
                   />
                 </div>
               </div>
-            </Parallax>
+            </div>
           );
         })}
       </div>

@@ -32,7 +32,7 @@ const ShortVideos = () => {
 
 
   return (
-    <div className="mt-10 relative max-w-[96rem] mx-auto flex  flex-col items-center md:flex-row text-sm md:justify-between gap-8 md:min-h-[70vh] !mb-32">
+    <div className="mt-32 md:mt-10 relative max-w-[96rem] mx-auto flex  flex-col items-center md:flex-row text-sm md:justify-between gap-8 md:min-h-[70vh] !mb-32">
       <Card
         className="p-0 w-[200px] md:absolute md:w-[150px] xl:w-[260px]  xl:-top-44 xl:left-8 md:left-8 md:-top-40   md:-rotate-45 bg-black"
         ref={parallax.ref}

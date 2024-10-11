@@ -3,6 +3,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import star from '../../../assets/icons/star.svg'
 import Image from "next/image";
+import { BlurIn } from "@/hooks/blurAnimation";
 
 export const Timeline = ({
   data
@@ -27,8 +28,10 @@ export const Timeline = ({
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
+    <BlurIn>
+
     (<div
-      className="w-full bg-neutral-950 font-sans md:px-10 py-32"
+      className="w-full bg-neutral-950 font-sans md:px-10 py-5 dm:py-32"
       ref={containerRef}>
       <div className="text-2xl md:text-7xl relative font-medium  text-center flex flex-col font-main">
            
@@ -40,13 +43,12 @@ export const Timeline = ({
                <Image alt="star" src={star} className="fill-main size-5  opacity-80"/>
            </div>
 
-           <div className="flex items-center">
+           <div className="flex flex-col md:flex-row items-center">
 
                <div className="text-main font-bold mr-2 relative xl:text-[80px]">
                Simple 
                </div>
                <div className="text-white whitespace-nowrap xl:text-[60px]">
-
                5-steps process
                </div>
            </div>
@@ -101,5 +103,7 @@ export const Timeline = ({
         </div>
       </div>
     </div>)
+    </BlurIn>
+
   );
 };
