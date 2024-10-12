@@ -13,7 +13,7 @@ const MobileNav = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="bg-black/30 backdrop-blur-md animate-fade-in [--animation-delay:600ms] z-50 md:hidden fixed top-0 w-full border">
+    <nav className="bg-black/30 backdrop-blur-md animate-fade-in [--animation-delay:600ms] z-50 md:hidden fixed top-0 w-full">
       <div className="px-2 flex items-center justify-between py-4 border-b">
         <Link href='/' className="block">
           <Image src={logo} alt="logo" className="w-32" />
