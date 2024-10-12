@@ -3,7 +3,6 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import star from '../../../assets/icons/star.svg'
 import Image from "next/image";
-import { BlurIn } from "@/hooks/blurAnimation";
 
 export const Timeline = ({
   data
@@ -28,7 +27,6 @@ export const Timeline = ({
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <BlurIn>
 
     (<div
       className="w-full bg-neutral-950 font-sans md:px-10 py-5 dm:py-32"
@@ -103,7 +101,6 @@ export const Timeline = ({
         </div>
       </div>
     </div>)
-    </BlurIn>
 
   );
 };

@@ -23,7 +23,6 @@ const tl = gsap.timeline({
     start: "10% 90%",
     end: '100% 100%',
     scrub: true,
-   markers: true,
    stagger: 1
 
   }
@@ -56,7 +55,6 @@ tl.to('.element', {
     <div className="min-h-[100vh] flex items-center py-10" ref={containerVideo}>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8  md:grid-cols-11 md:grid-rows-6 container mx-auto px-2">
         {products.map((product, index) => {
-          console.log(index);
           return (
             <div
             key={product.id}

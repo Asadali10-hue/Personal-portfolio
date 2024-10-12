@@ -2,9 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { DM_Sans, Poppins } from "next/font/google";
 import { twMerge } from "tailwind-merge";
-import { Nav } from "./_components/navigation/Nav";
 import CustomGlobalLayout from "./_components/CustomGlobalLayout";
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   metadataBase: new URL('https://refine-sepia.vercel.app/'),

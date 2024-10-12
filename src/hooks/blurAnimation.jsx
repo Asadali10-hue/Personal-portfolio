@@ -11,9 +11,9 @@ export function BlurIn({children}) {
       initial="hidden"
       
       whileInView="visible"
-      transition={{ duration: 1.5}}
+      transition={{ duration: 1}}
       variants={variants1}
-      className="text-center font-display text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]"
+      className=""
     >
       {children}
     </motion.div>

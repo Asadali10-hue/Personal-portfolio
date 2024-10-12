@@ -31,7 +31,7 @@ const NavTest = () => {
 
   return (
     <>
-    <nav className="fixed left-0 top-4 z-50 right-0  hidden md:block ">
+    <nav className="fixed left-0 top-4 z-50 right-0  hidden md:block">
     <div className="max-w-7xl mx-auto flex justify-between items-center px-6 ">
       {/* Logo Section */}
       {!isScrolled &&
