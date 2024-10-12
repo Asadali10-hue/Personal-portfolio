@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import CalcButton from "@/lib/calcButton";
+import CalcButton from "@/lib/CalcButton";
 
 export default function HeaderButton() {
   const label = "Book a Call";
