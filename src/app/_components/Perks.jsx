@@ -36,7 +36,6 @@ const Perks = () => {
             </div>
 
 
-            {/* Feature section */}
 
             <div className="mt-5 md:mt-20 lg:mt-48">
                 <FeaturesSection/>

@@ -1,10 +1,8 @@
 'use client'
 import React from "react";
-import CreatorsComposent from "./CreatorsComposent";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import Particles from "@/components/magicui/particles";
 import Link from "next/link";
-import CanvasCursor from "@/components/edil-ozi/canvas-cursor";
 import useCanvasCursor from "@/hooks/CanvasCursor";
 
 const Hiro2 = () => {
@@ -40,7 +38,6 @@ const Hiro2 = () => {
               <br className="hidden md:block text-main" /> on Instagram and YouTube.
             </p>
 
-            {/* <CreatorsComposent /> */}
             <Link href='#book' className="flex items-center gap-10 lg:mt-5">
               <ShimmerButton>Book a Call Now</ShimmerButton>
             </Link>
@@ -48,9 +45,7 @@ const Hiro2 = () => {
         </div>
       </div>
       <div className="absolute left-0 top-0 -z-[1] h-[900px] w-full overflow-hidden md:h-[1400px]">
-        {/* <div className="absolute left-0 top-0 z-10 h-[500px] w-full bg-gradient-to-b from-black to-transparent"></div>
-        <div className="absolute -right-[660px] top-0 z-10 h-[700px] w-[1400px] rotate-45 bg-gradient-to-b from-black to-transparent"></div>
-        <div className="absolute -right-[1000px] top-0 z-10 h-[200px] w-[1400px] rotate-45 bg-black"></div> */}
+      
   <div
   className="absolute inset-0 h-full w-full min-w-[1000px] bg-no-repeat"
   style={{

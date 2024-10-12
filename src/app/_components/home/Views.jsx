@@ -10,11 +10,7 @@ import "aos/dist/aos.css";
 const Views = () => {
   const [organicViews, setOrganicViews] = useState(75023489);
   useEffect(() => {
-    // const interval = setInterval(() => {
-    //   setOrganicViews((prevViews) => prevViews + 1); 
-    // }, 2000); // Update every 2 seconds
-
-    // return () => clearInterval(interval);
+   
 
     AOS.init({duration:1200})
   }, []);
@@ -26,12 +22,10 @@ const Views = () => {
       scale: 0,
     },
     animate:{
-      // rotateX: 0,
       opacity: 1,
       scale: 1,
       transition: {
         type: "spring",
-        // bounce: 0.4,
         duration: 2,
        
       }
@@ -45,11 +39,9 @@ const Views = () => {
       opacity: 0
     },
     animate:{
-      // rotateX: 0,
       opacity: 1,
       transition: {
-        // type: "spring",
-        // bounce: 0.4,
+      
         duration: 1,
         delay: .2
        

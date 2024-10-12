@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { MoveUpRight } from 'lucide-react'
 import { CursorComponent } from './CursorComponent'
-import { BlurIn } from '@/hooks/blurAnimation'
 
 const PortolioLink = () => {
   return (

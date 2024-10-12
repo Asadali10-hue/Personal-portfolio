@@ -1,7 +1,5 @@
 // 'use client'
-import { trusted } from '@/data/trusted'
 import React from 'react'
-import TrustedCard from '../trusted/TrustedCard'
 import dynamic from 'next/dynamic'
 import { Skeleton } from '@/components/ui/skeleton'
 import { contentfullUsers } from '@/lib/contentfulData'

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import LontTypesVideosSection from "./LontTypesVideosSection";
-import { ParallaxProvider } from "react-scroll-parallax";
 import { BlurIn } from "@/hooks/blurAnimation";
 
 export function LongVideosParallax() {

@@ -1,6 +1,5 @@
 'use client'
 import Marquee from "react-fast-marquee";
-import Calendly from "./Calendly";
 import CalComponent from "../CalComponent";
 import { BlurIn } from "@/hooks/blurAnimation";
 

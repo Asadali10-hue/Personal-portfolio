@@ -5,22 +5,17 @@ import { AiOutlineTikTok } from "react-icons/ai";
 import logoNoBg from '../../../../assets/logo/logoNoBg.png'
 
 import {
-   ChevronRight,
-   HeartHandshake,
    Youtube,
    Facebook,
    Mic,
    Heart,
    BadgeDollarSign
 } from 'lucide-react'
-import Link from 'next/link'
 import { useEffect, useId, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
 import Marquee from '@/components/magicui/marquee'
-import { Button } from '@/components/ui/button'
 import CtaButton from '../CtaButton';
 import Image from 'next/image';
-import { BlurIn } from '@/hooks/blurAnimation';
 const tiles = [
    {
       icon: <Youtube className="size-full text-rose-600" />,
@@ -63,12 +58,9 @@ const tiles = [
 function shuffleArray(array) {
    let currentIndex = array.length
    let randomIndex
-   // While there remain elements to shuffle.
    while (currentIndex !== 0) {
-      // Pick a remaining element.
       randomIndex = Math.floor(Math.random() * currentIndex)
       currentIndex--;
-      // And swap it with the current element.
       [array[currentIndex], array[randomIndex]] = [
          array[randomIndex],
          array[currentIndex],

@@ -1,12 +1,13 @@
 import { ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+import CalcButton from "@/lib/calcButton";
 
 export default function HeaderButton() {
   const label = "Book a Call";
   return (
-    <Link href='#book' className="group cursor-pointer block rounded-xl border-2 border-main border-opacity-0 bg-transparent p-1 transition-all duration-500 hover:border-opacity-100">
+    <CalcButton>
+    <div  className="group cursor-pointer block rounded-xl border-2 border-main border-opacity-0 bg-transparent p-1 transition-all duration-500 hover:border-opacity-100">
       <div className="relative flex items-center justify-center gap-4 overflow-hidden rounded-lg bg-main lg:px-6 px-4 py-3 font-bold text-white">
         {label}
         <ArrowRight className="transition-all group-hover:translate-x-2 group-hover:scale-125" />
@@ -16,6 +17,9 @@ export default function HeaderButton() {
           )}
         />
       </div>
-    </Link>
+    </div>
+
+    </CalcButton>
   );
 }
+
