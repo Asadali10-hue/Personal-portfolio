@@ -12,19 +12,6 @@ const CalComponent = () => {
             cssVarsPerTheme: {
               dark: {
                 "cal-brand": "#8806cd",
-                // "cal-text": "#6F61C0",
-                // "cal-text-emphasis": "#4D408D",
-                // "cal-border-emphasis": "#4D408D",
-                // "cal-text-error": "pink",
-                // "cal-border": "#A090E0",
-                // "cal-border-default": "#A090E0",
-                // "cal-border-subtle": "#A090E0",
-                // "cal-border-booker": "#A090E0",
-                // "cal-text-muted": "#C0B8FF",
-                // "cal-bg-emphasis": "#E1DFFF",
-                // "cal-border-booker-width": "3px",
-                // More CSS variables are defined here
-                // https://github.com/calcom/cal.com/blob/b0ca7dae1a17f897e34b83c990f30ab65f615ee0/packages/config/tailwind-preset.js#L69
               },
              
             },

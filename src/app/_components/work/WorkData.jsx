@@ -5,13 +5,14 @@ import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useSearchParams } from 'next/navigation'
-import { XIcon } from "lucide-react";
+import { Loader, XIcon } from "lucide-react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { animationVariants } from "@/lib/popopAnimation";
 import { FilterCategory } from "./FilterCategory";
 import PaginationComponent from "../PaginationComponent";
-import logo from '../../../../assets/logo/logoNoBg.png'
+import logo from "../../../../assets/logo/logoNoBg.png";
+import LoadingComponent from "./LoadingComponent";
 
 const VideReact = dynamic(() => import("./ReacttVideo"), {
   ssr: false,
@@ -24,6 +25,7 @@ const WorkData = () => {
   const [categories, setCategories] = useState([]);
   const [videoPopup, setVideoPopup] = useState(false);
   const [videoLink, setVideoLink] = useState("");
+  const [loading, setLoading] = useState(false);
   const animationStyle = "from-center";
   const selectedAnimation = animationVariants[animationStyle];
   const perPage = 9;
@@ -39,6 +41,7 @@ const WorkData = () => {
   useEffect(() => {
     const getVideos = async () => {
       try {
+        setLoading(true);
         const data = await contentfullvideos(
           currentPage,
           perPage,
@@ -47,8 +50,11 @@ const WorkData = () => {
         setVideos(data.items);
         setTotal(data.totalItems);
         setCategories(data.items);
+        setLoading(false);
+
       } catch (error) {
       } finally {
+        setLoading(false);
       }
     };
     getVideos();
@@ -92,6 +98,7 @@ const WorkData = () => {
             <FilterCategory className="top-2" categories={categories} />
           </div>
         </div>
+        {loading && <LoadingComponent />}
         <div
           className={`mt-32 grid grid-cols-1 gap-8 
   ${
@@ -139,12 +146,15 @@ const WorkData = () => {
             );
           })}
         </div>
+        {videos.length > 1 && 
+        
         <PaginationComponent
           currentPage={currentPage}
           total={total}
           perPage={perPage}
           industry={currentCategory}
         />
+        }
       </div>
     </section>
   );

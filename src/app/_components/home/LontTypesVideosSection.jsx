@@ -65,7 +65,6 @@ tl.to('.element', {
 
               <div className="relative aspect-w-16 aspect-h-9">
                 <div>
-                  {/* Wistia embed */}
                   <div
                     className={`wistia_embed wistia_async_${product.url} seo=false videoFoam=false `}
                     style={{

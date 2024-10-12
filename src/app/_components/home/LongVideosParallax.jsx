@@ -2,33 +2,14 @@
 import React from "react";
 import LontTypesVideosSection from "./LontTypesVideosSection";
 import { BlurIn } from "@/hooks/blurAnimation";
+import { videosParallax } from "@/data/videos";
 
 export function LongVideosParallax() {
-  return( 
+  return (
     <BlurIn>
-
-    <section id="results">
-
-  <LontTypesVideosSection products={products} />
-    </section>
+      <section id="results">
+        <LontTypesVideosSection products={videosParallax} />
+      </section>
     </BlurIn>
-
-)
+  );
 }
-export const products = [
-  {
-    id: 1,
-      url: 'bcvlk32j6b'
-  },
-  {
-    id: 2,
- 
-    url: '63n9nytlfx'
-  },
-  {
-    id: 7,
-    
-      url: 'ndzvpegtax'
-  },
-
-];

@@ -21,7 +21,6 @@ const CalendarComponent = () => {
             </div>
           </Marquee>
           <CalComponent/>
-          {/* <Calendly/> */}
         </div>
       </div>
     </section>

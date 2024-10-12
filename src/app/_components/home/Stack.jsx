@@ -1,5 +1,5 @@
 "use client";
-import { animate, easeInOut, useScroll } from "framer-motion";
+import {easeInOut, useScroll } from "framer-motion";
 import { useRef } from "react";
 import StackCard from "./StackCard";
 import { projects } from "@/data/stackData";

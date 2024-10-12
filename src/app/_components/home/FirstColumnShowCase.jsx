@@ -2,23 +2,13 @@
 
 import { MagicCard } from "@/components/magicui/magic-card";
 import { reviewsLong } from "@/data/longReviews";
-import React, { useState } from "react";
-// import Marquee from "react-fast-marquee";
 import Marquee from "react-fast-marquee";
-import ReactPlayer from "react-player";
 import { Quote } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 
 export function FirstColumnShowCase() {
-  const [playingIndex, setPlayingIndex] = useState(null);
-
-  const togglePlayPause = (index) => {
-    // Toggle play/pause for the clicked video, and pause all others
-    setPlayingIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
-
   return (
     <div className="">
       <Marquee pauseOnHover autoFill className="flex items-center gap-4">
@@ -32,21 +22,6 @@ export function FirstColumnShowCase() {
             >
               <MagicCard className=" w-full h-full  xl:w-[400px] md:w-[300px]">
                 <div className="relative hidden md:block  w-full md:h-[200px] xl:h-[300px] h-full  xl:w-[400px] ">
-                  {" "}
-                  {/* Increased to max-w-2xl for larger videos */}
-                  {/* <div
-                    className="bg-red-500 opacity-0 absolute inset-0 z-10"
-                    onClick={() => togglePlayPause(review.id)}
-                  ></div> */}
-                  {/* <ReactPlayer
-                    url={review.url}
-                    pip
-                    className=""
-                    controls={false}
-                    playing={playingIndex === review.id}
-                     width="100%"
-      height="100%"
-                  /> */}
                   <Image
                     src={review.image}
                     alt="image"
