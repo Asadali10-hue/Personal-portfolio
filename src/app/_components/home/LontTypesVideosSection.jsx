@@ -84,6 +84,8 @@ tl.to('.element', {
                   />
                 </div>
               </div>
+              <div className="text-white font-bold md:text-2xl mt-2">{product.name}</div>
+
             </div>
           );
         })}
