@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "we grow brands, We help entrepreneurs and creators build, grow, and monetize their brands on Instagram and YouTube.",
     openGraph:{
-      images: './img.png'
+      images: './image.png'
     }
 };
 
