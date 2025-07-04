@@ -115,8 +115,8 @@ export function Footer() {
 
              <div className="flex gap-1 items-center text-white mt-5">
                Say hi 👋{" "}
-               <Link href="mailto:info@visualjungle.com" className="text-main">
-                 info@visualjungle.com
+               <Link href="mailto:visualjungle001@gmail.com" className="text-main">
+                 visualjungle001@gmail.com
                </Link>
              </div>
            </div>
