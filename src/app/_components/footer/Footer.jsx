@@ -59,13 +59,13 @@ const footerSocials = [
     href: "",
     name: "Discord",
     icon: <Facebook className="size-4" />,
-    url: "https://www.instagram.com/refineframe/",
+    url: "https://www.instagram.com/visualjungle/",
   },
   {
     href: "",
     name: "Twitter",
     icon: <Instagram className="size-4" />,
-    url: "https://www.instagram.com/refineframe/",
+    url: "https://www.instagram.com/visualjungle/",
   },
 ];
 
@@ -91,32 +91,32 @@ export function Footer() {
            <div>
              <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10 text-white">
                <Link
-                 href="https://x.com/FrameRefine"
+                 href="https://x.com/visualjungle"
                  target="_blank"
                  className="block "
                >
                  <Twitter className="md:size-8" />
                </Link>
                <Link
-                 href="https://www.instagram.com/refineframe/"
+                 href="https://www.instagram.com/visualjungle/"
                  target="_blank"
                  className="block "
                >
                  <Instagram className="md:size-8" />
-               </Link>
+               {/* </Link>
                <Link
-                 href="https://www.linkedin.com/in/miraj-ahmed-91ba54311/"
+                 href="https://www.linkedin.com/in/"
                  target="_blank"
                  className="block "
-               >
+               > */}
                  <Linkedin className="md:size-8" />
                </Link>
              </div>
 
              <div className="flex gap-1 items-center text-white mt-5">
                Say hi 👋{" "}
-               <Link href="mailto:info@refineframe.com" className="text-main">
-                 info@refineframe.com
+               <Link href="mailto:info@visualjungle.com" className="text-main">
+                 info@visualjungle.com
                </Link>
              </div>
            </div>
@@ -124,19 +124,19 @@ export function Footer() {
 
          <div className="flex flex-col gap-2 rounded-md border-neutral-700/20 px-8 py-4 sm:flex sm:flex-row sm:items-center sm:justify-between">
            <div className="flex gap-1 text-xs sm:mt-0 sm:justify-center text-muted-foreground">
-             <span>Developed by</span>{" "}
+             <span>Developed by</span>{"Alihassan "}
              <Link
-               href="https://www.kilebe.pro/"
+               href="#"
                target="_blank"
                className="text-main"
              >
-               Kilebe
+               Ali Hassan
              </Link>
            </div>
            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
              Copyright © {new Date().getFullYear()}{" "}
              <Link href="/" className="cursor-pointer">
-               Refine Frame
+             Visual Jungle
              </Link>
              . All Rights Reserved.
            </span>

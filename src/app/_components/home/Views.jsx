@@ -30,7 +30,7 @@ const Views = () => {
           <span className='font-semibold text-white text-xl md:text-3xl lg:text-[3.75rem] lg:mt-5'>followers</span>
         </div>
       </div>
-
+      
       <p className='h-fit mt-10 md:mt-20 py-2 font-main text-white font-bold  lg:text-[2.5rem]'>and counting...</p>
     </div>
       

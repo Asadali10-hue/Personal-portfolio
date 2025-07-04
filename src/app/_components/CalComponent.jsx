@@ -23,7 +23,7 @@ const CalComponent = () => {
   return (
     <div className="mt-20 !pointer-events-auto iframe-parent">
         <Cal namespace="30min"
-	  calLink="miraj-ahmed-b4vkbd/30min"
+	  calLink="asada/30min"
 	  style={{width:"100%",height:"100%",overflow:"scroll"}}
 	  config={{layout: 'month_view'}}
     

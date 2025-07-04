@@ -38,7 +38,7 @@ const NavTest = () => {
       
       <div className="text-2xl font-bold text-white">
         <Link href="/">
-          <Image src={logo} alt='logo' className='w-32 lg:w-44'/>
+          <Image src={logo} alt='logo' className='w-40 lg:w-44'/>
         </Link>
       </div>
     }

@@ -15,7 +15,7 @@ export const reviewsLong = [
     image: breet,
     name: "Brett Conti, Travel Vlogger",
     review:
-      "Refine Frame’s editing for my vlogs has been a game changer. They turn my raw footage into cinematic stories that keep my audience coming back for more.",
+      "Visual Jungle’s editing for my vlogs has been a game changer. They turn my raw footage into cinematic stories that keep my audience coming back for more.",
     url: "https://www.youtube.com/watch?v=yDNj0aZ7oFY",
   },
   {
@@ -23,7 +23,7 @@ export const reviewsLong = [
     image: learn,
     name: "Learn With Shopify",
     review:
-      "The team at Refine Frame took our videos to a professional level. Their editing makes every video look sharp and engaging, perfect for our YouTube channel.",
+      "The team at Visual Jungle took our videos to a professional level. Their editing makes every video look sharp and engaging, perfect for our YouTube channel.",
     url: "https://www.youtube.com/watch?v=XhgWBUBJtnE",
   },
   {
@@ -31,7 +31,7 @@ export const reviewsLong = [
     image: fernanda,
     name: "Fernanda Ramirez,, Beauty Influencer",
     review:
-      "Refine Frame has helped me scale my lifestyle channel by editing my videos to perfection. Every transition and effect is smooth, making my content shine.",
+      "Visual Jungle has helped me scale my lifestyle channel by editing my videos to perfection. Every transition and effect is smooth, making my content shine.",
     url: "https://www.youtube.com/watch?v=Ig8WGLyZ-aA",
   },
   {
@@ -39,7 +39,7 @@ export const reviewsLong = [
     image: ryan,
     name: "Ryan Serhant, Real Estate Agent",
     review:
-      "Refine Frame is my go-to for editing real estate videos. Their clean and polished cuts showcase properties beautifully, helping me attract more buyers.",
+      "Visual Jungle is my go-to for editing real estate videos. Their clean and polished cuts showcase properties beautifully, helping me attract more buyers.",
     url: "https://www.youtube.com/watch?v=4lozd33fmyQ",
   },
   {
@@ -47,7 +47,7 @@ export const reviewsLong = [
     image: sheen,
     name: "Sheen Gurrib , Podcast Host",
     review:
-      "I started a podcast and had no idea how to edit it. Refine Frame made my episodes sound and look professional, and I’ve gained more listeners because of it.",
+      "I started a podcast and had no idea how to edit it. Visual Jungle made my episodes sound and look professional, and I’ve gained more listeners because of it.",
     url: "https://www.youtube.com/watch?v=bdpyQm5l78o",
   },
   {
@@ -63,7 +63,7 @@ export const reviewsLong = [
     image: dave,
     name: "Dave Nick, Health & Wellness Influencer",
     review:
-     "Their edits brought my bussiness content to life. Refine Frame understands how to deliver calming, visually soothing videos that resonate with my audience.",
+     "Their edits brought my bussiness content to life. Visual Jungle understands how to deliver calming, visually soothing videos that resonate with my audience.",
     url: "https://www.youtube.com/watch?v=OiTsh-Pxaok",
   },
   {
@@ -71,7 +71,7 @@ export const reviewsLong = [
     image: clickup,
     name: "Clickup",
     review:
-     "From writing scripts to delivering high-quality motion graphics, Refine Frame was the full package. Their SaaS explainer videos truly took our product to the next level.",
+     "From writing scripts to delivering high-quality motion graphics, Visual Jungle was the full package. Their SaaS explainer videos truly took our product to the next level.",
     url: "https://www.youtube.com/watch?v=H-97IZ5t6fU",
   },
  
@@ -80,7 +80,7 @@ export const reviewsLong = [
     image: humphrey,
     name: "Humphrey Yang, YouTuber",
     review:
-      "Refine Frame’s editing for my vlogs has been a game changer. They turn my raw footage into cinematic stories that keep my audience coming back for more.",
+      "Visual Jungle’s editing for my vlogs has been a game changer. They turn my raw footage into cinematic stories that keep my audience coming back for more.",
     url: "https://www.youtube.com/watch?v=p8gT4N-UHtI",
   },
 ];

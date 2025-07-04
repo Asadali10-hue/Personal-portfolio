@@ -6,7 +6,7 @@ import CustomGlobalLayout from "./_components/CustomGlobalLayout";
 
 export const metadata = {
   metadataBase: new URL('https://refine-sepia.vercel.app/'),
-  title: "Refine frame",
+  title: "Visual Jungle",
   description:
     "we grow brands, We help entrepreneurs and creators build, grow, and monetize their brands on Instagram and YouTube.",
     openGraph:{
