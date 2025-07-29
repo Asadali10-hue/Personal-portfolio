@@ -113,17 +113,22 @@ export function Footer() {
                </Link>
              </div>
 
-             <div className="flex gap-1 items-center text-white mt-5">
-               Say hi 👋{" "}
+             <div className="text-white mt-5">
+              <div>
+                Say hi 👋{" "}
                <Link href="mailto:visualjungle001@gmail.com" className="text-main">
                  visualjungle001@gmail.com
                </Link>
+              </div>
+               <div>
+               JAKARTA SERVICED OFFICE 16th FLOOR WISMA JL, <br />JENDRAL SUDIRMAN KAV 1 RT, Indonasia
+              </div>
              </div>
            </div>
          </div>
 
-         <div className="flex flex-col gap-2 rounded-md border-neutral-700/20 px-8 py-4 sm:flex sm:flex-row sm:items-center sm:justify-between">
-           <div className="flex gap-1 text-xs sm:mt-0 sm:justify-center text-muted-foreground">
+         <div className="flex flex-col gap-2 rounded-md border-neutral-700/20 px-8 py-4 sm:flex sm:flex-row sm:items-center sm:justify-center text-center">
+           {/* <div className="flex gap-1 text-xs sm:mt-0 sm:justify-center text-muted-foreground">
              <span>Developed by</span>{"Alihassan "}
              <Link
                href="#"
@@ -132,14 +137,14 @@ export function Footer() {
              >
                Ali Hassan
              </Link>
-           </div>
-           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-             Copyright © {new Date().getFullYear()}{" "}
-             <Link href="/" className="cursor-pointer">
-             Visual Jungle
-             </Link>
-             . All Rights Reserved.
-           </span>
+           </div> */}
+            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+              Copyright © {new Date().getFullYear()}{" "}
+              <Link href="/" className="cursor-pointer">
+              Visual Jungle
+              </Link>
+              . All Rights Reserved.
+            </span>
          </div>
        </div>
      </footer>
