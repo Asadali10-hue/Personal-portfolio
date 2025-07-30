@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Twitter, Linkedin } from 'lucide-react'
+import { Instagram, Facebook, Twitter, Linkedin, MapIcon, Map, MapPinned } from 'lucide-react'
 import Link from 'next/link'
 import logo from '../../../../public/logo.png'
 import Image from 'next/image'
@@ -120,8 +120,8 @@ export function Footer() {
                  visualjungle001@gmail.com
                </Link>
               </div>
-               <div>
-               JAKARTA SERVICED OFFICE 16th FLOOR WISMA JL, <br />JENDRAL SUDIRMAN KAV 1 RT, Indonasia
+               <div className='flex items-center gap-2 mt-4'>
+               <MapPinned className='md:size-9' /> JAKARTA SERVICED OFFICE 16th FLOOR WISMA JL, <br />JENDRAL SUDIRMAN KAV 1 RT, Indonasia
               </div>
              </div>
            </div>
