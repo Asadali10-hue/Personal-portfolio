@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Twitter, Linkedin, MapIcon, Map, MapPinned } from 'lucide-react'
+import { Instagram, Facebook, Twitter, Linkedin, MapIcon, Map, MapPinned, Phone } from 'lucide-react'
 import Link from 'next/link'
 import logo from '../../../../public/logo.png'
 import Image from 'next/image'
@@ -73,7 +73,7 @@ export function Footer() {
    return (
      <footer>
        <div className="mx-auto w-full max-w-screen-xl xl:pb-2">
-         <div className="gap-4 p-4 px-8 py-16 sm:pb-16 md:flex md:justify-between">
+         <div className="gap-4 p-4 px-8 py-16 sm:pb-16 lg:flex lg:justify-between lg:items-start">
            <div className="mb-12 flex flex-col gap-4">
              <Link href="/" className="flex items-center gap-2">
                <Image
@@ -88,41 +88,86 @@ export function Footer() {
              </p>
            </div>
 
-           <div>
-             <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10 text-white">
-               <Link
-                 href="https://www.instagram.com/visualjungle/"
-                 target="_blank"
-                 className="block "
-               >
-                 {/* <Twitter className="md:size-8" /> */}
-                 <Instagram className="md:size-8" />
-               </Link>
-               <Link
-                 href="https://www.linkedin.com/in/asad-a-244bb4256/"
-                 target="_blank"
-                 className="block "
-               >
-               {/* </Link>
-               <Link
-                 href="https://www.linkedin.com/in/"
-                 target="_blank"
-                 className="block "
-               > */}
-                 <Linkedin className="md:size-8" />
-               </Link>
+           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+             {/* Contact & Social Section */}
+             <div className="space-y-6">
+               <div className="text-white">
+                 <div className="mb-6">
+                   <p className="text-lg mb-2">Say hi 👋</p>
+                   <Link href="mailto:visualjungle001@gmail.com" className="text-main hover:text-purple-300 transition-colors text-base">
+                     visualjungle001@gmail.com
+                   </Link>
+                 </div>
+                 
+                 {/* Social Media */}
+                 <div className="flex gap-4">
+                   <Link
+                     href="https://www.instagram.com/visualjungle/"
+                     target="_blank"
+                     className="p-2 rounded-full border border-gray-700 hover:border-main hover:bg-main/10 transition-all duration-300"
+                   >
+                     <Instagram className="size-5" />
+                   </Link>
+                   <Link
+                     href="https://www.linkedin.com/in/asad-a-244bb4256/"
+                     target="_blank"
+                     className="p-2 rounded-full border border-gray-700 hover:border-main hover:bg-main/10 transition-all duration-300"
+                   >
+                     <Linkedin className="size-5" />
+                   </Link>
+                 </div>
+               </div>
              </div>
 
-             <div className="text-white mt-5">
-              <div>
-                Say hi 👋{" "}
-               <Link href="mailto:visualjungle001@gmail.com" className="text-main">
-                 visualjungle001@gmail.com
-               </Link>
-              </div>
-               <div className='flex items-center gap-2 mt-4'>
-               <MapPinned className='md:size-9' /> JAKARTA SERVICED OFFICE 16th FLOOR WISMA JL, <br />JENDRAL SUDIRMAN KAV 1 RT, Indonasia
-              </div>
+             {/* Office Locations Section */}
+             <div className="text-white space-y-8">
+               <h3 className="text-lg font-semibold text-main mb-6">Our Offices</h3>
+               
+               {/* Sialkot Office */}
+               <div className="space-y-3">
+                 <div className="flex items-start gap-3">
+                   <MapPinned className="size-5 text-main flex-shrink-0 mt-1" />
+                   <div>
+                     <p className="font-medium text-white mb-1">Sialkot, Pakistan</p>
+                     <p className="text-gray-300 text-sm leading-relaxed">
+                       2nd floor, Js bank building,<br />
+                       Bean bags office, Sialkot
+                     </p>
+                   </div>
+                 </div>
+                 <div className="flex items-center gap-3 ml-8">
+                   <Phone className="size-4 text-main flex-shrink-0" />
+                   <Link 
+                     href="tel:+923456727104" 
+                     className="text-gray-300 hover:text-main transition-colors text-sm"
+                   >
+                     +92 345 6727104
+                   </Link>
+                 </div>
+               </div>
+
+               {/* Jakarta Office */}
+               <div className="space-y-3">
+                 <div className="flex items-start gap-3">
+                   <MapPinned className="size-5 text-main flex-shrink-0 mt-1" />
+                   <div>
+                     <p className="font-medium text-white mb-1">Jakarta, Indonesia</p>
+                     <p className="text-gray-300 text-sm leading-relaxed">
+                       JAKARTA SERVICED OFFICE 16th FLOOR WISMA JL,<br />
+                       JENDRAL SUDIRMAN KAV 1 RT, Indonesia
+                     </p>
+                   </div>
+                 </div>
+                 <div className="flex items-center gap-3 ml-8">
+                   <Phone className="size-4 text-main flex-shrink-0" />
+                   <Link 
+                     href="tel:+6282230842795" 
+                     className="text-gray-300 hover:text-main transition-colors text-sm"
+                   >
+                     +62 822 3084 2795
+                   </Link>
+                 </div>
+               </div>
              </div>
            </div>
          </div>
